@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- use as " font-family: "Oswald", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- h font end -->
+    <!-- small font -->
+    <!-- use as"font-family: "Quicksand", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- s font end -->
+    <link rel="preconnect" href="https://font.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script scr="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@400;700&amp;family=Rubik:wght@400;500&amp;family=Open+Sans:wght@400;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- extra link ends -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .clg-name{
+            display: flex;
+            flex-direction: column;
+            align-content:space-between ;
+            gap:5px;
+            opacity: 0.8;
+        }
+        .clg-title{
+            padding-top: 1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            width:100%vw;
+            height:9rem;
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        .head-search{
+            text-decoration: none;
+            position: relative;
+            left:60px;
+            
+        }
+        .nit-title{
+            
+            font-weight: bold;
+        }
+        .hindi-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #main-title{
+            font-size: 25px;
+            font-family: "Merriweather", serif;
+        }
+        #sub-main-title{
+            
+            font-size: 17px;
+        }
+        .sticky{
+            position: sticky;
+            top:0px;
+            z-index: 990;
+            
+        }
+        .head-link{
+            height:5rem;
+            width:100%vw;
+            /* display:flex;
+           padding-left: 30px;
+           padding-right: 30px;
+            align-items: center;
+            justify-content:space-evenly;
+            gap:50px; */
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        #home-icon{
+        transform: scale(1.75);
+        text-decoration-color:  solid rgb(241, 97, 39);
+        }
+        .title-link{
+            color: black;
+            text-decoration: none;
+            font-weight:500;
+            font-size: 18px;
+            
+            
+        }
+        .title-link:hover{
+            color: rgb(241, 97, 39);
+        }
+        .hline{
+            border-bottom: 7px solid rgb(241, 97, 39);
+        }
+        .dropdownmenu{
+            display: inline-block;
+            position: relative;
+        }
+        .INSTITUTE-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .INSTITUTE-HOVER{
+            display: block;
+        }
+        .INSTITUTE-HOVER li{
+            display: block;
+        }
+        .INSTITUTE-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+
+        }
+        .Administration-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Administration-HOVER{
+            display: block;
+        }
+        .Administration-HOVER li{
+            display: block;
+        }
+        .Administration-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Department-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Department-HOVER{
+            display: block;
+        }
+        .Department-HOVER li{
+            display: block;
+        }
+        .Department-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Examination-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Examination-HOVER{
+            display: block;
+        }
+        .Examination-HOVER li{
+            display: block;
+        }
+        .Examination-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Facilities-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Facilities-HOVER{
+            display: block;
+        }
+        .Facilities-HOVER li{
+            display: block;
+        }
+        .Facilities-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Centers-Cell-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Centers-Cell-HOVER{
+            display: block;
+        }
+        .Centers-Cell-HOVER li{
+            display: block;
+        }
+        .Centers-Cell-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Media-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Media-HOVER{
+            display: block;
+        }
+        .Media-HOVER li{
+            display: block;
+        }
+        .Media-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        
+        }
+        .ab{
+            background-color:rgb(127, 255, 212,0.7);
+            width: 300px;
+            font-weight: 500;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+       <!-- clg main header start -->
+       <div class="clg-title">
+            <!-- nit logo -->
+            <div class="clg-img "><img src="./images/nitrr-logo.png" alt="img" width="100px"></div>
+            <!-- nit title -->
+            <div class="clg-name flex flex-col ">
+                <p class="hindi-title">राष्ट्रीय प्रौद्योगिकी संस्थान रायपुर</p>
+                <p class="nit-title" id="main-title">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</p>
+                <p class="nit-title" id="sub-main-title">An Institute of National Importance</p> 
+            </div>
+            <div class="head-search">
+                <a href=""><i class="gg-search"></i></i></a>     
+            </div>   
+        </div>
+
+        <!-- header links -->
+        <div class="sticky">
+            <div class="head-link flex justify-evenly pt-6">
+    
+                    <a href="/index.html" id="home-icon"  class="title-link relative top-[8px] "><i class="fa fa-home"></i></a>
+    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link inst ">Institute</a>
+                        <div class="ab INSTITUTE-HOVER   ">
+                            <ul>
+                                <li><a href="/gegesis.html">Genesis</a></li>
+                                <li><a href="/institute.html">About Institute</a></li>
+                                <li><a href="https://nitrr.ac.in/downloads/Vision%202030_24112021.pdf" target="_blank">Vision 2030</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Administration</a>
+                        <div class=" ab Administration-HOVER  ">
+                            <ul>
+                                <li><a href="/boarOfGov.html">Board of Governers</a> </li>
+                                <li><a href="/chairperson.html">Chairpersion</a></li>
+                                <li><a href="/director.html">Director</a></li>
+                                <li><a href="/deans.html">Deans</a></li>
+                                <li><a href="/registrar.html">Registrar</a></li>
+                                <li><a href="/senat.html">Senat</a></li>
+                                <li><a href="/workCommeeti.html">Building and Work Committee</a></li>
+                                <li><a href="/financeCommeetti.html">Finance Committee</a></li>
+                                <li><a href="">Administrative Staff</a></li>
+                                <li><a href="/community.html">Committees</a></li>
+                                <li><a href="">Faculty List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Department</a>
+                        <div class=" ab Department-HOVER  ">
+                            <ul>
+                                <li><a href="/IT.html">Information Technology</a></li>
+                                <li><a href="/appliedGeoligy.html">Applied Geology</a></li>
+                                <li><a href="/architecture.html">Department of Architecture & Planning</a></li>
+                                <li><a href="/bioMed.html">Biomedical Engineering</a></li>
+                                <li><a href="/bioTech.html">Bio Technology</a> </li>
+                                <li><a href="/chem.html">Chemical Engineering</a></li>
+                                <li><a href="/civil.html">Civil Engineering</a></li>
+                                <li><a href="/cse.html">Computer Science & Engineering</a></li>
+                                <li><a href="/chemistry.html">Department of Chemistry</a></li>
+                                <li><a href="/ca.html">Department of Computer Application</a></li>
+                                <li><a href="/math.html">Department of Mathematics</a></li>
+                                <li><a href="/physic.html">Department of Physics</a></li>
+                                <li><a href="/humanity.html">Department of Humanities & Social Sciences</a></li>
+                                <li><a href="/EE.html">Electrical Engineering </a></li>
+                                <li><a href="/ECE.html">Electronics and  Communication Engineering </a></li>
+                                <li><a href="/mech.html">Mechanical Engineering</a></li>
+                                <li><a href="/min.html">Mining Engineering</a></li>
+                                <li><a href="/meta.html">Metallurgical and Materials Engineering</a></li>
+                                <li><a href="/workshop.html">Workshop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="/rersearch.html" class=" dropdownmenu title-link "><span>Research & Consultancy</span></a>
+                    
+                    <div class="dropdownmenu   ">
+                        <a href="" class="title-link">Examination</a>
+                        <div class="ab Examination-HOVER  ">
+                            <ul>
+                                <li><a href="/timeTable.html">Time Table</a></li>
+                                <li><a href="/eduVeri.html">Education Verfication Procedure</a></li>
+                                <li><a href="/notice.html">Notice </a></li>
+                                <li><a href="/result.html">Results</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Facilities</a>
+                        <div class="ab Facilities-HOVER  ">
+                            <ul>
+                            <li><a href="/centarlLibrery.html">Central Library</a></li>
+                            <li><a href="/hostel.html">Hostel</a></li>
+                            <li><a href="/medical.html">Medical Facilities</a></li>
+                            <li><a href="/guest.html">Guest House</a></li>
+                            <li><a href="/campusSecurity.html">Campus Security</a></li>
+                            <li><a href="/EstateOffice.html">Estate Office </a></li>
+                            <li><a href="https://nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf" target="_blank">Charges for Common Facilities</a></li>
+                            <li><a href="/sports.html">Sports</a></li>
+                            <li><a href="/allInOneStore.html">All in One Store</a></li>
+                            <li><a href="/vachan.html">Vachan Milk Parlour and Coffee Day</a></li>
+                            <li><a href="/canteen.html">Canteen and CCD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="https://ccc.nitrr.ac.in/" target="_blank" class="title-link">Centers / Cell</a>
+                        <div class="ab Centers-Cell-HOVER  ">
+                            <ul>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Central Computer Center</a></li>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Career Development Center</a></li>
+                                <li><a href="/educationCell.html">Continuing Education Center </a></li>
+                                <li><a href="https://tpo.nitrr.ac.in/" target="_blank">Training and Placement Cell</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu">
+                        <a href="" class="title-link">Media</a>
+                        <div class="ab Media-HOVER  ">
+                            <ul>
+                                <li><a href="/pmrc.html">PMRC</a></li>
+                                <li><a href="/galary.html">Image Gallery</a></li>
+                                <li><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank">Video Gallery</a></li>
+                                <li><a href="https://nitrr.ac.in/mediapress.php" target="_blank">Press Clipping</a></li>
+                                <li><a href="/mirror.html">Mirror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.nitrrfie.in/" target="_blank" class=" title-link ">NITRRFIE</a>
+            </div>
+            <div class="hline"></div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="h-[2400px] flex justify-center mt-6">
+            <div class=" h-[2200px] w-[1300px] border-4 pl-6 pr-6">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+                    <div class="panel panel-primary text-white" >
+                       <div class="panel-heading bg-green-400" style="text-align:center;font-weight:bold;font-size:20px;"><i class="fa fa-bars bg-green-400" style="color:white; " aria-hidden="true"></i> &nbsp; SENATE</div>
+                       <div style="color:black;">
+                     <div class="panel-body">
+                <br>
+                <div class="container-fluid" ;="">
+                <br><br>
+                      <div style="overflow-x:auto;">
+                <!--<table class="table table-bordered" cellpadding="8" cellspacing="2" width="90%" border="0" >-->
+                  <table cellspacing="0" border="1">
+                                    <tbody><tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody><thead class="bg-green-400" style="color:white;">
+                                    <tr>
+                                        <td>S.N.</td>
+                                        <td>Name</td>
+                                        <td>Designation</td>
+                                        <td>Role</td>
+                                    </tr>
+                                        </thead>
+                                    <tbody><tr>
+                                        <td>1</td>
+                                        <td>Dr. N V Ramana Rao</td>
+                                        <td>Director, NIT Raipur</td>
+                                        <td>Chairperson</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Dr. Vinita Mohindra </td>
+                                        <td>Professor, Department of Humanities, MANIT Bhopal</td>
+                                        <td>Member <br>(16 Sep. 2022 – 15 Sep. 2024)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Dr. Kaustubha Mohanty</td>
+                                        <td>Professor, Department of Chemical Engineering, IIT Guwahati</td>
+                                        <td>Member<br>(16 Sep. 2022 – 15 Sep. 2024)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Dr. Kallol Paul</td>
+                                        <td>Professor, Department of Mathematics, Jadavpur University</td>
+                                        <td>Member <br>(16 Sep. 2022 – 15 Sep. 2024)
+                
+                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Dr. Shrish Verma</td>
+                                        <td>Professor, Department of Electronics &amp; Communication Engg. &amp; Dean (Academics)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Dr. D Sanyal</td>
+                                        <td>Professor, Department of Architecture &amp; Dean (Faculty Welfare)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Dr.R. K. Tripathi</td>
+                                        <td>Professor , Civil Engineering Department  &amp; Dean (Planning &amp; Development)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Dr. Prabhat Diwan</td>
+                                        <td>Professor , Applied Geology Department, &amp; Dean (Research &amp; Consultancy)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Dr. Nitin Jain</td>
+                                        <td>Professor, Mechanical Engineering, Department &amp; Dean (Students’ Welfare)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Dr. D. C. Jhariya</td>
+                                        <td>Head, Department of Applied Geology</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Dr. Abir Bandyopadhyay </td>
+                                        <td>Professor, Department of Architecture &amp; Head Department of Architecture</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Dr. Bikesh Kumar Singh</td>
+                                        <td>Head, Department of Bio-Medical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Dr. Awanish Kumar</td>
+                                        <td>Head, Department of Bio-Technology</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Dr. Amit Keshav</td>
+                                        <td>Professor, Chemical Engineering Department &amp; Head, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Dr.(Mrs.) Tungabidya Maharana </td>
+                                        <td>Head, Department of Chemistry</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Dr. Shirish V. Deo</td>
+                                        <td>Professor , Civil Engineering Department &amp; Head , Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Dr. Priyanka Tripathi</td>
+                                        <td>Professor, Computer Applications Department &amp; Head, Department of Computer Applications</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Dr. Pradeep Singh</td>
+                                        <td>Head, Department of Computer Science &amp; Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Dr. (Mrs.) A. Yadav</td>
+                                        <td>Professor , Electrical Engineering Department &amp; Head, Department of Electrical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Dr. Toshanlal Meenpal </td>
+                                        <td>Head, Department of Electronics &amp; Communication Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Dr. Anoop Tiwari</td>
+                                        <td>Head, Department of Humanities &amp; Social Sciences</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>Dr. Sanjay Kumar</td>
+                                        <td>Head, Department of Information Technology</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>Dr. Debasisha Mishra</td>
+                                        <td>Head, Department of Mathematics</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>Dr. S L Sinha </td>
+                                        <td>Professor , Mechanical Engineering Department &amp; Head, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Dr. Manoj Kumar Chopkar</td>
+                                        <td>Professor, Metallurgical &amp; Materials Engineering &amp; Head ,Department of Metallurgical &amp; Materials Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Dr. B R Parate</td>
+                                        <td>Head, Department of Mining Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>Dr. Bijay Kumar Sahoo</td>
+                                        <td>Professor, Department of Physics  &amp; Head, Department of Physics</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                
+                
+                                     <!-- <tr>
+                                        <td>28</td>
+                                        <td>Dr. Abir Bandyopadhyay</td>
+                                        <td>Professor, Department of Architecture</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                                        <tr>
+                                        <td>28</td>
+                                        <td>Dr. Samir Bajpai</td>
+                                        <td>Professor, Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                         <tr>
+                                        <td>29</td>
+                                        <td>Dr. U K Dewangan</td>
+                                        <td>Professor, Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                        <tr>
+                                        <td>30</td>
+                                        <td>Dr. Gangadhar Ramtekar </td>
+                                        <td>Professor, Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                
+                                    <!--<tr>
+                                        <td>31</td>
+                                        <td>Dr. S. L. Sinha</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                                    
+                                    <!-- <tr>
+                                        <td>31</td>
+                                        <td>Dr. A. M. Rawani</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr> -->
+                                    <!--<tr>
+                                        <td>29</td>
+                                        <td>Dr. S. L. Sinha</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                                    <tr>
+                                        <td>31</td>
+                                        <td>Dr. R. Salhotra</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                <!--	<tr>
+                                        <td>30</td>
+                                        <td>Dr. (Mrs.)S. L. Sinha</td>
+                                        <td>Professor, Deptt of Mechanical Engg.</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                                    <tr>
+                                        <td>32</td>
+                                        <td>Dr. S. D. Patle</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                     <tr>
+                                        <td>33</td>
+                                        <td>Dr. S. P. S. Matharu</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                       <tr>
+                                        <td>34</td>
+                                        <td>Dr. A. K. Tiwari
+                </td>
+                                        <td>Professor, Department of Mechanical Engineering
+                </td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                         <tr><td>35</td>
+                                        <td>Dr. S Sanyal 
+                </td>
+                                        <td>Professor, Department of Mechanical Engineering
+                </td>
+                                        <td>Member</td>
+                                    </tr><tr>
+                                        <td>36</td>
+                                        <td>Dr. A. K. Shrivastav</td>
+                                        <td>Professor, Department of Physics</td>
+                                        <td>Member</td>
+                                    </tr>
+                                        <tr>
+                                        <td>37</td>
+                                        <td>Dr. Sadhana Agrawal </td>
+                                        <td>Professor, Department of Physics</td>
+                                        <td>Member</td>
+                                    </tr>
+                                       
+                                      <tr>
+                                        
+                
+                                     </tr><tr>
+                                        <td>38</td>
+                                        <td>Dr.(Mrs) A. B. Soni</td>
+                                        <td>Professor, Department of chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                       
+                
+                
+                                           <tr>
+                                        <td>39</td>
+                                        <td>Dr. (Smt.) Swasti Sthapak</td>
+                                        <td>Professor, Department of Architecture</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                <!-- <tr>
+                                        <td>38</td>
+                                        <td>Dr. Prabhat Diwan</td>
+                                        <td>Professor, Department of Applied Geology</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                
+                                      <tr>
+                                        <td>39</td>
+                                        <td>Dr. D. Sanyal</td>
+                                        <td>Professor, Department of Architecture</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                                     
+                
+                
+                                     <tr>
+                                        <td>40</td>
+                                        <td>Dr. Lata S. Upadhyay</td>
+                                        <td>Professor, Department of Bio-Technology</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                     <tr>
+                                        <td>41</td>
+                                        <td>Dr. Pratima Gupta</td>
+                                        <td>Professor, Department of Bio-Technology</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>42</td>
+                                        <td>Dr. B. Mazumdar</td>
+                                        <td>Professor, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                
+                                       <tr>
+                                        <td>43</td>
+                                        <td>Dr. P.K. Choudhary</td>
+                                        <td>Professor, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                          
+                                       <tr>
+                                        <td>44</td>
+                                        <td>Dr. V.K. Singh</td>
+                                        <td>Professor, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                       
+                                       <tr>
+                                        <td>45</td>
+                                        <td>Dr. Anil Kumar Poonia</td>
+                                        <td>Professor, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                           
+                                       <!--<tr>
+                                        <td>43</td>
+                                        <td>Dr. Amit Keshav</td>
+                                        <td>Professor, Department of Chemical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                                   
+                                       <tr>
+                                        <td>46</td>
+                                        <td>Dr. Laxmikant Yadu</td>
+                                        <td>Professor, Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                            
+                                      <!-- <tr>
+                                        <td>49</td>
+                                        <td>Dr. Shirish V. Deo</td>
+                                        <td>Professor, Department of Civil Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                
+                                       <tr>
+                                        <td>47</td>
+                                        <td>Dr. Naresh Nagwani</td>
+                                        <td>Professor, Department of Computer Science &amp; Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                      <!--<tr>
+                                        <td>51</td>
+                                        <td>Dr. (Smt.) Anamika Yadav</td>
+                                        <td>Professor, Department of Electrical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                                    <tr>
+                                        <td>48</td>
+                                        <td>Dr. Narendra D. Londhe</td>
+                                        <td>Professor, Department of Electrical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td>53</td>
+                                        <td>Dr. Subhojit Ghosh </td>
+                                        <td>Professor, Department of Electrical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                                     <tr>
+                                        <td>49</td>
+                                        <td>Dr. Sachin Jain</td>
+                                        <td>Professor, Department of Electrical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                        <tr>
+                                        <td>50</td>
+                                        <td>Dr. Guru Prasad Subas Chandra Mishra</td>
+                                        <td>Professor, Department of Electronics and Communication Engg.</td>
+                                        <td>Member</td>
+                                    </tr>
+                                            <tr>
+                                        <td>51</td>
+                                        <td>Dr. (Smt.) Jaya Dwivedi</td>
+                                        <td>Professor, Department of Humanities and Social Science </td>
+                                        <td>Member</td>
+                                    </tr>
+                                        <tr>
+                                        <td>52</td>
+                                        <td>Dr. Sudhakar Pandey</td>
+                                        <td>Professor, Department of Information Technology</td>
+                                        <td>Member</td>
+                                    </tr>
+                                         <tr>
+                                        <td>53</td>
+                                        <td>Dr. Arvind Kumar Sinha</td>
+                                        <td>Professor, Department of Mathematics</td>
+                                        <td>Member</td>
+                                    </tr>
+                                        <tr>
+                                        <td>54</td>
+                                        <td>Dr. Mithilesh Atulkar</td>
+                                        <td>Professor, Department of MCA</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                       <!-- <tr>
+                                        <td>60</td>
+                                        <td>Dr. (Smt.) Priyanka Tripathi</td>
+                                        <td>Professor, Department of MCA</td>
+                                        <td>Member</td>-->
+                                    
+                
+                                        <tr>
+                                        <td>55</td>
+                                        <td>Dr. R.K. Yadav</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                                      <!--<tr>
+                                        <td>62</td>
+                                        <td>Dr. Nitin Kumar Jain</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>-->
+                
+                                       <tr>
+                                        <td>56</td>
+                                        <td>Dr. Shubhankar Bhowmick</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>57</td>
+                                        <td>Dr. Neigapula Venkata Swamy Naidu</td>
+                                        <td>Professor, Department of Mechanical Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>58</td>
+                                        <td>Dr. Manoj Kumar Chopkar</td>
+                                        <td>Professor, Department of Metallurgical and Materials Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <!--<td>66</td>
+                                        <td>Dr. P.Y. Dhekne</td>
+                                        <td>Professor, Department of Mining Engineering</td>
+                                        <td>Member</td>-->
+                                    
+                                    <tr><td>59</td>
+                                        <td>Dr. Pankaj Dewangan</td>
+                                        <td>Professor, Department of Mining Engineering</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr><td>60</td>
+                                        <td>Dr. Ayush Khare</td>
+                                        <td>Professor, Department of Physics</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <!--<td>69</td>
+                                        <td>Dr. Bijaya Kumar Sahoo</td>
+                                        <td>Professor, Department of Physics</td>
+                                        <td>Member</td>-->
+                                    
+                                    <tr><td>61</td>
+                                        <td>Dr. Sapan Mohan Saini</td>
+                                        <td>Professor, Department of Physics</td>
+                                        <td>Member</td>
+                                    </tr>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                    <tr>
+                                        <td>62</td>
+                                        <td>Dr. Manoj Pradhan</td>
+                                        <td>Professor Mining Engineering Department &amp; Chief Warden (Boys' Hostel)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>63</td>
+                                        <td>Dr. (Mrs.) S. Gupta
+                </td>
+                                        <td>Professor, Electrical Engineering &amp; Chief Warden (Girls' Hostel)</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>64</td>
+                                        <td>Dr. Subhojit  Ghosh</td>
+                                        <td>Professor, Department of Electrical Engineering &amp; Controller of Examinations</td>
+                                        <td>Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65</td>
+                                        <td>Dr. P.Y. Dhekne</td>
+                                        <td>Professor, Department of Mining Engineering and Member Senate  &amp; Registrar I/c</td>
+                                        <td>Secretary</td>
+                                    </tr>
+                                </tbody></table>
+                <br><br><br>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                                                <center> <div class="address">Minutes of the meetings of the Senate  </div></center><br><br>
+                   
+                                                <table class="lab" cellpadding="8" cellspacing="2" width="90%" border="0" align="center">
+                                                  <!-- <tr>
+                                                    <th class="title">S.No.</th>
+                                                    <th class="title">Particulars</th>
+                                                    
+                                                  </tr> -->
+                                                  
+                                                     <tbody><tr>   
+                                                    <!-- <td>1</td>    -->                                 
+                                      <td><div class="container bg-green-400" style="border-style:ridge;width:100%">
+                                      <a href="downloads/senate/2024/MINUTES OF SENATE 50.PDF" style="color:white;">Minutes of the Last Meeting of the Senate NIT Raipur (Dated 29.09.2023)</a> <img border="0" src="images/new6.gif" width="18" height="7">  
+                                      <br> <div align="right"> <a href="senate_arch.php"> <font color="red"> Archive </font></a> </div></div></td>
+                                                     </tr>
+                
+                
+                
+                </tbody></table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+                
+                
+                
+                
+                
+                                            </div>
+                
+                      
+                     
+                    </div>
+                    </div></div>
+                    </div>
+            </div>
+        </div>
+        
+
+    <!-- footer -->
+    <div class="hline relative top-[-96px]"></div>
+
+    <div class="quick-link-footer h-[520px] relative top-[-96px] bg-[#212529] grid grid-cols-2 overflow-x-hidden">
+        <div class="footer-left ">
+            <h2 class=" justify-center font-mullish text-white text-2xl font-bold pt-[30px] pl-[300px] pb-[30px]">Quick Link</h2>
+            <div class="h-1 w-[700px] relative left-[30px]  bg-white"></div>
+            <div class="flex justify-center relative left-[30px] pt-[40px]">
+                <div class="flex flex-col gap-y-3 text-white">
+                    <a href="">NIT Raipur at a Glance</a>
+                    <a href="">Vision 2030</a>
+                    <a href="">MIS</a>
+                    <a href="">MOUs</a>
+                    <a href="">MOOCs</a>
+                    <a href="">NITRR newsletter</a>
+                    <a href="">Year Wise Topper List</a>
+                    <a href="">NIT Act , Statues and Office Memorandum</a>
+                    <a href="">E-Booklet</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Web OPAC</a>
+                    <a href="">ICC</a>
+                    <a href="">RTI</a>
+                    <a href="">TEQIP III</a>
+                    <a href="">Shilpi</a>
+                    <a href="">Research Newsletter NIT Raipur</a>
+                    <a href="">SWAYAM Free Online Education</a>      
+                    <a href="">Pledge Certificate</a>
+                    <a href="">Institute Alumnus Awards</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Annual Report</a>
+                    <a href="">Unnat Bharat Abhiyan At NITRR</a>
+                    <a href="">Anti ragging System</a>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Industry Institute Collaboration Cell(IICC)</a>        
+                    <a href="">National Academic Depository(NAD)</a>
+                    <a href="">NIT Raipur Liberary Discovery</a>
+                    <a href="">Institute Innovation and Start up Policy</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe class="relative top-[90px] left-[100px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083284962!2d81.60245417521736!3d21.249722180455397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1712469817699!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+    </div> 
+
+    <!-- last-footer -->
+    <div class="hline relative top-[-96px]"></div>
+    <div class="last-footer relative pt-[40px] pb-[40px]  pr-[40px] top-[-96px] bg-[url(https://nitw.ac.in/api/static/files/green_bg_2024-2-29-18-13-29.jpg)] grid grid-cols-2">
+        <div class="last-footer-left pl-[100px]">
+            <h1 class="font-mullish text-black text-4xl font-bold pb-[30px]">Contact Us</h1>
+            <div class="bg-black h-1 w-[300px] "></div>
+            <div class="pt-[20px]">
+                <img src="./images/nitrr-logo.png" alt="" width="100px">
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">+91-870-xxxxxxx,+91-870-xxxxxxx</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">registrar@nitrr.ac.in</span></div>
+                <div class="flex pt-[20px] gap-[20px]">
+                    <a href="">
+                        <img src="./images/facebook2.png" alt="" width="40px">
+                    </a>
+                    <a href=""><img src="./images/twitter2.png" alt="" width="40px"></a>
+                    <a href=""><img src="./images/google.png" alt="" width="57px" class="relative top-[4px]"></a>
+                    <a href=""><img src="./images/insta2.png" alt="" width="40px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer-right pr-[80px]">
+            <h1 class="font-mullish text-black text-4xl pb-[20px]  font-bold">National portals</h1>
+            <div class="h-1 w-[400px] bg-black"></div>
+            <div class="grid grid-cols-3 gap-4 pt-[30px]">
+                <a href=""><img src="https://nitw.ac.in/media/files/moe.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/dii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/mii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/swach_bharath.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/fit_india.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/digilocker_nad.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

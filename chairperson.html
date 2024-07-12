@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- use as " font-family: "Oswald", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- h font end -->
+    <!-- small font -->
+    <!-- use as"font-family: "Quicksand", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- s font end -->
+    <link rel="preconnect" href="https://font.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script scr="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@400;700&amp;family=Rubik:wght@400;500&amp;family=Open+Sans:wght@400;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- extra link ends -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .clg-name{
+            display: flex;
+            flex-direction: column;
+            align-content:space-between ;
+            gap:5px;
+            opacity: 0.8;
+        }
+        .clg-title{
+            padding-top: 1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            width:100%vw;
+            height:9rem;
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        .head-search{
+            text-decoration: none;
+            position: relative;
+            left:60px;
+            
+        }
+        .nit-title{
+            
+            font-weight: bold;
+        }
+        .hindi-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #main-title{
+            font-size: 25px;
+            font-family: "Merriweather", serif;
+        }
+        #sub-main-title{
+            
+            font-size: 17px;
+        }
+        .sticky{
+            position: sticky;
+            top:0px;
+            z-index: 990;
+            
+        }
+        .head-link{
+            height:5rem;
+            width:100%vw;
+            /* display:flex;
+           padding-left: 30px;
+           padding-right: 30px;
+            align-items: center;
+            justify-content:space-evenly;
+            gap:50px; */
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        #home-icon{
+        transform: scale(1.75);
+        text-decoration-color:  solid rgb(241, 97, 39);
+        }
+        .title-link{
+            color: black;
+            text-decoration: none;
+            font-weight:500;
+            font-size: 18px;
+            
+            
+        }
+        .title-link:hover{
+            color: rgb(241, 97, 39);
+        }
+        .hline{
+            border-bottom: 7px solid rgb(241, 97, 39);
+        }
+        .dropdownmenu{
+            display: inline-block;
+            position: relative;
+        }
+        .INSTITUTE-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .INSTITUTE-HOVER{
+            display: block;
+        }
+        .INSTITUTE-HOVER li{
+            display: block;
+        }
+        .INSTITUTE-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+
+        }
+        .Administration-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Administration-HOVER{
+            display: block;
+        }
+        .Administration-HOVER li{
+            display: block;
+        }
+        .Administration-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Department-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Department-HOVER{
+            display: block;
+        }
+        .Department-HOVER li{
+            display: block;
+        }
+        .Department-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Examination-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Examination-HOVER{
+            display: block;
+        }
+        .Examination-HOVER li{
+            display: block;
+        }
+        .Examination-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Facilities-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Facilities-HOVER{
+            display: block;
+        }
+        .Facilities-HOVER li{
+            display: block;
+        }
+        .Facilities-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Centers-Cell-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Centers-Cell-HOVER{
+            display: block;
+        }
+        .Centers-Cell-HOVER li{
+            display: block;
+        }
+        .Centers-Cell-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Media-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Media-HOVER{
+            display: block;
+        }
+        .Media-HOVER li{
+            display: block;
+        }
+        .Media-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        
+        }
+        .ab{
+            background-color:rgb(127, 255, 212,0.7);
+            width: 300px;
+            font-weight: 500;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+       <!-- clg main header start -->
+       <div class="clg-title">
+            <!-- nit logo -->
+            <div class="clg-img "><img src="./images/nitrr-logo.png" alt="img" width="100px"></div>
+            <!-- nit title -->
+            <div class="clg-name flex flex-col ">
+                <p class="hindi-title">राष्ट्रीय प्रौद्योगिकी संस्थान रायपुर</p>
+                <p class="nit-title" id="main-title">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</p>
+                <p class="nit-title" id="sub-main-title">An Institute of National Importance</p> 
+            </div>
+            <div class="head-search">
+                <a href=""><i class="gg-search"></i></i></a>     
+            </div>   
+        </div>
+
+        <!-- header links -->
+        <div class="sticky">
+            <div class="head-link flex justify-evenly pt-6">
+    
+                    <a href="/index.html" id="home-icon"  class="title-link relative top-[8px] "><i class="fa fa-home"></i></a>
+    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link inst ">Institute</a>
+                        <div class="ab INSTITUTE-HOVER   ">
+                            <ul>
+                                <li><a href="/gegesis.html">Genesis</a></li>
+                                <li><a href="/institute.html">About Institute</a></li>
+                                <li><a href="https://nitrr.ac.in/downloads/Vision%202030_24112021.pdf" target="_blank">Vision 2030</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Administration</a>
+                        <div class=" ab Administration-HOVER  ">
+                            <ul>
+                                <li><a href="/boarOfGov.html">Board of Governers</a> </li>
+                                <li><a href="/chairperson.html">Chairpersion</a></li>
+                                <li><a href="/director.html">Director</a></li>
+                                <li><a href="/deans.html">Deans</a></li>
+                                <li><a href="/registrar.html">Registrar</a></li>
+                                <li><a href="/senat.html">Senat</a></li>
+                                <li><a href="/workCommeeti.html">Building and Work Committee</a></li>
+                                <li><a href="/financeCommeetti.html">Finance Committee</a></li>
+                                <li><a href="">Administrative Staff</a></li>
+                                <li><a href="/community.html">Committees</a></li>
+                                <li><a href="">Faculty List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Department</a>
+                        <div class=" ab Department-HOVER  ">
+                            <ul>
+                                <li><a href="/IT.html">Information Technology</a></li>
+                                <li><a href="/appliedGeoligy.html">Applied Geology</a></li>
+                                <li><a href="/architecture.html">Department of Architecture & Planning</a></li>
+                                <li><a href="/bioMed.html">Biomedical Engineering</a></li>
+                                <li><a href="/bioTech.html">Bio Technology</a> </li>
+                                <li><a href="/chem.html">Chemical Engineering</a></li>
+                                <li><a href="/civil.html">Civil Engineering</a></li>
+                                <li><a href="/cse.html">Computer Science & Engineering</a></li>
+                                <li><a href="/chemistry.html">Department of Chemistry</a></li>
+                                <li><a href="/ca.html">Department of Computer Application</a></li>
+                                <li><a href="/math.html">Department of Mathematics</a></li>
+                                <li><a href="/physic.html">Department of Physics</a></li>
+                                <li><a href="/humanity.html">Department of Humanities & Social Sciences</a></li>
+                                <li><a href="/EE.html">Electrical Engineering </a></li>
+                                <li><a href="/ECE.html">Electronics and  Communication Engineering </a></li>
+                                <li><a href="/mech.html">Mechanical Engineering</a></li>
+                                <li><a href="/min.html">Mining Engineering</a></li>
+                                <li><a href="/meta.html">Metallurgical and Materials Engineering</a></li>
+                                <li><a href="/workshop.html">Workshop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="/rersearch.html" class=" dropdownmenu title-link "><span>Research & Consultancy</span></a>
+                    
+                    <div class="dropdownmenu   ">
+                        <a href="" class="title-link">Examination</a>
+                        <div class="ab Examination-HOVER  ">
+                            <ul>
+                                <li><a href="/timeTable.html">Time Table</a></li>
+                                <li><a href="/eduVeri.html">Education Verfication Procedure</a></li>
+                                <li><a href="/notice.html">Notice </a></li>
+                                <li><a href="/result.html">Results</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Facilities</a>
+                        <div class="ab Facilities-HOVER  ">
+                            <ul>
+                            <li><a href="/centarlLibrery.html">Central Library</a></li>
+                            <li><a href="/hostel.html">Hostel</a></li>
+                            <li><a href="/medical.html">Medical Facilities</a></li>
+                            <li><a href="/guest.html">Guest House</a></li>
+                            <li><a href="/campusSecurity.html">Campus Security</a></li>
+                            <li><a href="/EstateOffice.html">Estate Office </a></li>
+                            <li><a href="https://nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf" target="_blank">Charges for Common Facilities</a></li>
+                            <li><a href="/sports.html">Sports</a></li>
+                            <li><a href="/allInOneStore.html">All in One Store</a></li>
+                            <li><a href="/vachan.html">Vachan Milk Parlour and Coffee Day</a></li>
+                            <li><a href="/canteen.html">Canteen and CCD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="https://ccc.nitrr.ac.in/" target="_blank" class="title-link">Centers / Cell</a>
+                        <div class="ab Centers-Cell-HOVER  ">
+                            <ul>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Central Computer Center</a></li>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Career Development Center</a></li>
+                                <li><a href="/educationCell.html">Continuing Education Center </a></li>
+                                <li><a href="https://tpo.nitrr.ac.in/" target="_blank">Training and Placement Cell</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu">
+                        <a href="" class="title-link">Media</a>
+                        <div class="ab Media-HOVER  ">
+                            <ul>
+                                <li><a href="/pmrc.html">PMRC</a></li>
+                                <li><a href="/galary.html">Image Gallery</a></li>
+                                <li><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank">Video Gallery</a></li>
+                                <li><a href="https://nitrr.ac.in/mediapress.php" target="_blank">Press Clipping</a></li>
+                                <li><a href="/mirror.html">Mirror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.nitrrfie.in/" target="_blank" class=" title-link ">NITRRFIE</a>
+            </div>
+            <div class="hline"></div>
+        </div>
+        <!-- Page Content -->
+        <div class="h-[750px] flex justify-center mt-6">
+            <div class=" h-[560px] w-[1200px] border-4 pl-4 pr-4">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+                    <div class="panel panel-primary text-white" >
+                       <div class="panel-heading bg-green-400" style=" text-align:center;font-weight:bold;font-size:20px;">
+                       <i class="fa fa-bars bg-green-400" style="color:white; " aria-hidden="true"></i> &nbsp; Chairperson</div>
+                       <div style="color:black;">
+                     <div class="panel-body" style="padding:20px">
+                <br>
+                      <div class="content">
+                      
+                      <div class="container-fluid">
+                
+                  <div class="row">
+                    <div class="col-sm-4">
+                    
+                    </div>
+                    <div class="col-sm-4">
+                   <center><img src="./images/Dr.suresh.jpg" width="200" height="220" class="border border-primary"> <br><br><b>
+                                                  <!-- <font size=3 color = blue>    Dr A M Rawani</font></B></center>-->
+                                                    <font size="3" color="blue">    <a href="downloads/27-8-22023 Suresh Haware Personal Profile for WA.pdf" target="_new">Dr. Suresh Haware <br>Managing Director ,<br>
+                Haware Engineers and Builders Pvt Ltd </a></font></b></center>
+                    </div>
+                    <div class="col-sm-4">
+                    
+                    </div>
+                    
+                
+                  </div>
+                   
+                  <br>
+                    
+                </div>
+                 <!--<div align=justify>
+                   <span class="start"></span>Dr. N.V. Ramana Rao is at present <b>Director & Professor of Civil Engineering </b>at   National Institute of Technology Raipur. He did his <b>BE </b>in Civil Engineering from <b>(Osmania)</b>, <b>M.Tech</b> from <b>(IIT Delhi)</b>,   <b>Ph.D </b>(from (UK) and <b>Post Doctorate</b>.(from UK) in   Civil and Structural Engineering from <b>University of Wales, Swansea , UK</b>.  He has held several Administrative posts <b>as Registrar, JNTU Hyderabad</b>, Kukatpally, Hyderabad from 30.04.2012 to 21.07.2015, as<b> Principal, JNTUH College of Engineering Hyderabad, Kukatpally</b>, Hyderabad from 30.04.2008 to 24.11.2011, as <b>Director, Bureau of Industrial Consultancy Services, JNTU</b>, Hyderabad from 05.09.2003 to 05.05.2006, as <b>Co-ordinator, Entrepreneurship Development Cell, JNTU</b>, Hyderabad from 01.08.2002 to 31.01.2004. <br /><br />
+                
+                 Prof. Ramana Rao has edited three books and published <b>186 </b>papers in International Journals/International Conferences/ National Journals/ National Conferences.  He has organized 12 Conferences/Workshops,   Delivered 15 invited lectures. He has guided more than <b>80 M.Tech’s, 13 Ph.D’s</b> and guiding at present several Ph.Ds.
+                
+                <br /><br />
+                Prof. Ramana Rao has won Several <b>Awards/ Prizes/Certificates</b>, to name a few:
+                    <br>1) <b>Outstanding Concrete Engineer Award</b> for the year 2012 by A.P. Chapter of the Indian Concrete Institute.
+                    <br>2) <b>TOBIP Award </b>for the year by the Junior Chambers International, Hyderabad, September 2012, JCI Banjara Hyderabad.
+                    <br>3) <b>Arthur Cotton Memorial Prize</b> by the Institute of Engineers (India) for the best paper in the IEI Journal, December, 2012.
+                    <br>4) <b>State Best Teacher Award </b>for the year 2011 by the Government of Andhra Pradesh.
+                   <br> 5) <b>Best Designer Award </b>for year the 2004 by Indian Concrete Institute, A.P., Hyderabad Centre for the School of Information Technology Building.
+                    <br>6) Awarded the 1998 <b>Commonwealth Fellowship</b> to pursue Post-Doctoral research at the University of Wales, Swansea. U.K.
+                    <br>7) <b>Young Engineer Award</b> for the year 1995 by Government of Andhra Pradesh and Institution of Engineers, India, A.P. State Centre.
+                    <br>8) Awarded the 1989 <b>Commonwealth Scholarship</b> to pursue PhD in Structural engineering at the University of Wales, Swansea, UK.
+                   <br> 9) <b>Arthur Cotton Memorial Prize </b>by the Institute of Engineers (India) for the best paper in the Studies on the Impact of Explosion on Blast Resistant Stiffened Door Structures, Series A, Volume 96, 2015.
+                    <br>10) <b>“Eminent Engineer “Award </b>presented by the Association of Consulting Civil Engineer (India) ACCE (I), Madurai on 2nd June 2018, for the immense contribution to the construction industry.
+                   <br> 11) <b>“Bharat Ratna Sir Mokshagundam Visvesvaraya Prize Award-2020” </b>in the field of <b>“Engineering”</b>, presented by the Institute of Engineers (India), Telangana State Centre, Hyderabad and Government of Telangana.
+                
+                
+                
+                  
+                <br /><br />
+                Prof. Ramana Rao has been a Member <b>of Academic Senate, JNTU,</b> Hyderabad, Expert Committee Member of City Police Commissionerate Head Qauarters Building and Integrated Command & Control Center, <b>Past Chairman of the Indian Concrete Institute–</b> AP Hyderabad Center, <b>Past Secretary of the Indian Concrete Institute– </b>AP Hyderabad Center, <b>Executive member of the Indian Institute of Bridge Engineers.</b> He has held Membership of <b>Several Important State level Government Committees.</b> He has been a <b>Member of Several AICTE Inspection Committees, </b>Board of Studies <b>Chairman </b>in Civil Engineering, JNTUH, <b>Coordinator, Singareni Collieries Recruitment Test.</b> He has been External <b>Expert Member of ISRO Departmental Promotion Committee (DPC).</b> He has nominated as an <b>Expert Committee member constituted by the UGC for grant of Autonomous status</b> to various Technical Institutions. He has been a Subject Committee <b>Member of Telangana State Public Service Commission.</b> He has a <b>Member of Telangana State Pollution Control Board,</b> Expert Committee Member of <b>Telangana State Power Generation Corporation. </b>He has been <b>Convener, EAMCET – 2010, 2011, 2012, 2013, 2014 (A.P.) and Convener,EAMCET–2015&2016(T.S.)</b> a State Level Entrance Examination. He is also <b>Member, JEE Apex Board (JAB) for conduct of JEE Examination in 2018, 2019 & 2020</b> for admission into IITs, NITs & CFTIs for admission into Professional courses of Engineering and Medical streams. He has been a member of Several High Power Committees constituted by Govt. of AP & Telangana. He has been a member of the committee to frame affiliation guidelines for affiliated Engineering Colleges by Govt. of Telangana. He has also elected <b>Fellow of Telangana Academy of Sciences in the Year 2018.</b>
+                 <br /><br />
+                
+                Prof. Ramana Rao has visited US, UK, China, Spain, Taiwan, Portugal (Lisbon) for academic collaboration.
+                 </div> 
+                
+                <br /><br />
+                <b>Previously he has held the post of:</b>
+                 <br /><br />
+                
+                Director, NIT Warangal from 23.10.2017-26.04.2023
+                Director (Additional charge), NIT, Andhra Pradesh from 23.10.2017 to 23.03.2018.
+                Director (Additional charge), SPA, Vijayawada from 18.11.2021 to 23.09.2022.
+                
+                 <br /><br />
+                <b>Prof. Ramana Rao</b> took over charge as Director, NIT Raipur on 08.06.2023
+                
+                -->
+                
+                
+                 <!-- <div align=justify>
+                   <span class="start"></span>Dr. Rawani is a Professor in Mechanical Engineering and joined as the Director of National Institute of Technology Raipur in October 2017. He has received his M.Tech. in Industrial Engineering and Management from I.I.T. Kharagpur and Ph.D. in Strategic Management from I.I.T. Delhi. He has about 40 years of teaching/research and administrative experience of educational institutes. Prior to his joining as Director, he has shouldered many senior level administrative positions including Dean (Academics), Dean (Administration), Dean (Research & Consultancy), Dean (Faculty Welfare) and Head of Department at NIT Raipur.
+                 <br /><br />
+                
+                 Dr. Rawani has published more than one hundred and fifty research papers in International/National Journals and International Conferences. Recently, Dr. Rawani has co-authored a book titled ‘E-Revolution in Indian Higher Education with COVID-19’. This book addresses various issues in the higher education sector that have arisen due to the COVID-19 pandemic, and it has been very well received by both academicians as well as students. Dr. Rawani has produced nine PhDs under his supervision and is currently supervising one more candidate for doctoral program. He has delivered invited lectures in many countries including Switzerland, Singapore, Malaysia, China, Mauritius, Dubai, USA, Hong Kong, Thailand and Indonesia. He has served as reviewer for many International Journals and conferences. 
+                <br /><br />
+                Dr. Rawani is conferred with fellowship award by Indian Institute of Industrial Engineering, Mumbai for outstanding contribution in promotion of Industrial Engineering Profession. In 2022, Dr. Rawani has been conferred with the ‘Education Leadership Award’ by World Education Congress, ‘Exemplary Leadership Award’ by APAC News Network, ‘Director of the year’ Award by Universal Mentors Association and ‘Shiksha Ratna Award’ by Reverie Language Technologies. He was also conferred with 'International Corporate Leadership Award in the field of Education' in 2015 at Bangkok and with ‘Pride of Asia International Award’ in 2014 by Economic Growth Society of India. He has also received 'Rashtriya Gaurav Award' in 2010 by India International Friendship Society, India. He was honoured by The Institution of Engineers (India) Chhattisgarh State Centre in 2009 for his valuable contribution in the field of Technical Education. He is the recipient of Best Management Case Award in 'GIFT CASE 2000' competition (executive category) from Global Institute of Flexible Systems Management.
+                
+                
+                  
+                <br /><br />
+                Dr. Rawani is a Life Member of Global Institute of Flexible Systems Management, Life Member of Indian Society for Technical Education, Fellow Life Member of Institution of Engineers (India) and Fellow Member of Indian Institution of Industrial Engineers. He is a UGC nominated member of the Academic Advisory Committee of Human Resource Development Centre, Pandit Ravishankar Shukla University, Raipur. He had active collaboration with Confederation of Indian Industry (CII), Chhattisgarh Council of Science and Technology, EGADE Business School Mexico, South Asia Institute of Science and Engineering, Hong Kong and International Economic Development Research Centre, Hong Kong for research and other academic purposes. 
+                  
+                 <br /><br />
+                
+                His areas of interest are Strategic Management, Flexible Systems Management and Quality Management in education.
+                 </div>
+                 -->
+                                                     
+                    
+                    
+                  
+                </div>
+                
+                      
+                     
+                    </div>
+                    </div></div>
+                    </div>
+            </div>
+        </div>
+        
+
+    <!-- footer -->
+    <div class="hline relative top-[-96px]"></div>
+
+    <div class="quick-link-footer h-[520px] relative top-[-96px] bg-[#212529] grid grid-cols-2 overflow-x-hidden">
+        <div class="footer-left ">
+            <h2 class=" justify-center font-mullish text-white text-2xl font-bold pt-[30px] pl-[300px] pb-[30px]">Quick Link</h2>
+            <div class="h-1 w-[700px] relative left-[30px]  bg-white"></div>
+            <div class="flex justify-center relative left-[30px] pt-[40px]">
+                <div class="flex flex-col gap-y-3 text-white">
+                    <a href="">NIT Raipur at a Glance</a>
+                    <a href="">Vision 2030</a>
+                    <a href="">MIS</a>
+                    <a href="">MOUs</a>
+                    <a href="">MOOCs</a>
+                    <a href="">NITRR newsletter</a>
+                    <a href="">Year Wise Topper List</a>
+                    <a href="">NIT Act , Statues and Office Memorandum</a>
+                    <a href="">E-Booklet</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Web OPAC</a>
+                    <a href="">ICC</a>
+                    <a href="">RTI</a>
+                    <a href="">TEQIP III</a>
+                    <a href="">Shilpi</a>
+                    <a href="">Research Newsletter NIT Raipur</a>
+                    <a href="">SWAYAM Free Online Education</a>      
+                    <a href="">Pledge Certificate</a>
+                    <a href="">Institute Alumnus Awards</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Annual Report</a>
+                    <a href="">Unnat Bharat Abhiyan At NITRR</a>
+                    <a href="">Anti ragging System</a>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Industry Institute Collaboration Cell(IICC)</a>        
+                    <a href="">National Academic Depository(NAD)</a>
+                    <a href="">NIT Raipur Liberary Discovery</a>
+                    <a href="">Institute Innovation and Start up Policy</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe class="relative top-[90px] left-[100px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083284962!2d81.60245417521736!3d21.249722180455397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1712469817699!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+    </div> 
+
+    <!-- last-footer -->
+    <div class="hline relative top-[-96px]"></div>
+    <div class="last-footer relative pt-[40px] pb-[40px]  pr-[40px] top-[-96px] bg-[url(https://nitw.ac.in/api/static/files/green_bg_2024-2-29-18-13-29.jpg)] grid grid-cols-2">
+        <div class="last-footer-left pl-[100px]">
+            <h1 class="font-mullish text-black text-4xl font-bold pb-[30px]">Contact Us</h1>
+            <div class="bg-black h-1 w-[300px] "></div>
+            <div class="pt-[20px]">
+                <img src="./images/nitrr-logo.png" alt="" width="100px">
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">+91-870-xxxxxxx,+91-870-xxxxxxx</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">registrar@nitrr.ac.in</span></div>
+                <div class="flex pt-[20px] gap-[20px]">
+                    <a href="">
+                        <img src="./images/facebook2.png" alt="" width="40px">
+                    </a>
+                    <a href=""><img src="./images/twitter2.png" alt="" width="40px"></a>
+                    <a href=""><img src="./images/google.png" alt="" width="57px" class="relative top-[4px]"></a>
+                    <a href=""><img src="./images/insta2.png" alt="" width="40px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer-right pr-[80px]">
+            <h1 class="font-mullish text-black text-4xl pb-[20px]  font-bold">National portals</h1>
+            <div class="h-1 w-[400px] bg-black"></div>
+            <div class="grid grid-cols-3 gap-4 pt-[30px]">
+                <a href=""><img src="https://nitw.ac.in/media/files/moe.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/dii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/mii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/swach_bharath.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/fit_india.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/digilocker_nad.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- use as " font-family: "Oswald", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- h font end -->
+    <!-- small font -->
+    <!-- use as"font-family: "Quicksand", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- s font end -->
+    <link rel="preconnect" href="https://font.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script scr="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@400;700&amp;family=Rubik:wght@400;500&amp;family=Open+Sans:wght@400;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- extra link ends -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .clg-name{
+            display: flex;
+            flex-direction: column;
+            align-content:space-between ;
+            gap:5px;
+            opacity: 0.8;
+        }
+        .clg-title{
+            padding-top: 1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            width:100%vw;
+            height:9rem;
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        .head-search{
+            text-decoration: none;
+            position: relative;
+            left:60px;
+            
+        }
+        .nit-title{
+            
+            font-weight: bold;
+        }
+        .hindi-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #main-title{
+            font-size: 25px;
+            font-family: "Merriweather", serif;
+        }
+        #sub-main-title{
+            
+            font-size: 17px;
+        }
+        .sticky{
+            position: sticky;
+            top:0px;
+            z-index: 990;
+            
+        }
+        .head-link{
+            height:5rem;
+            width:100%vw;
+            /* display:flex;
+           padding-left: 30px;
+           padding-right: 30px;
+            align-items: center;
+            justify-content:space-evenly;
+            gap:50px; */
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        #home-icon{
+        transform: scale(1.75);
+        text-decoration-color:  solid rgb(241, 97, 39);
+        }
+        .title-link{
+            color: black;
+            text-decoration: none;
+            font-weight:500;
+            font-size: 18px;
+            
+            
+        }
+        .title-link:hover{
+            color: rgb(241, 97, 39);
+        }
+        .hline{
+            border-bottom: 7px solid rgb(241, 97, 39);
+        }
+        .dropdownmenu{
+            display: inline-block;
+            position: relative;
+        }
+        .INSTITUTE-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .INSTITUTE-HOVER{
+            display: block;
+        }
+        .INSTITUTE-HOVER li{
+            display: block;
+        }
+        .INSTITUTE-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+
+        }
+        .Administration-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Administration-HOVER{
+            display: block;
+        }
+        .Administration-HOVER li{
+            display: block;
+        }
+        .Administration-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Department-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Department-HOVER{
+            display: block;
+        }
+        .Department-HOVER li{
+            display: block;
+        }
+        .Department-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Examination-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Examination-HOVER{
+            display: block;
+        }
+        .Examination-HOVER li{
+            display: block;
+        }
+        .Examination-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Facilities-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Facilities-HOVER{
+            display: block;
+        }
+        .Facilities-HOVER li{
+            display: block;
+        }
+        .Facilities-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Centers-Cell-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Centers-Cell-HOVER{
+            display: block;
+        }
+        .Centers-Cell-HOVER li{
+            display: block;
+        }
+        .Centers-Cell-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Media-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Media-HOVER{
+            display: block;
+        }
+        .Media-HOVER li{
+            display: block;
+        }
+        .Media-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        
+        }
+        .ab{
+            background-color:rgb(127, 255, 212,0.7);
+            width: 300px;
+            font-weight: 500;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+       <!-- clg main header start -->
+       <div class="clg-title">
+            <!-- nit logo -->
+            <div class="clg-img "><img src="./images/nitrr-logo.png" alt="img" width="100px"></div>
+            <!-- nit title -->
+            <div class="clg-name flex flex-col ">
+                <p class="hindi-title">राष्ट्रीय प्रौद्योगिकी संस्थान रायपुर</p>
+                <p class="nit-title" id="main-title">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</p>
+                <p class="nit-title" id="sub-main-title">An Institute of National Importance</p> 
+            </div>
+            <div class="head-search">
+                <a href=""><i class="gg-search"></i></i></a>     
+            </div>   
+        </div>
+
+        <!-- header links -->
+        <div class="sticky">
+            <div class="head-link flex justify-evenly pt-6">
+    
+                    <a href="/index.html" id="home-icon"  class="title-link relative top-[8px] "><i class="fa fa-home"></i></a>
+    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link inst ">Institute</a>
+                        <div class="ab INSTITUTE-HOVER   ">
+                            <ul>
+                                <li><a href="/gegesis.html">Genesis</a></li>
+                                <li><a href="/institute.html">About Institute</a></li>
+                                <li><a href="https://nitrr.ac.in/downloads/Vision%202030_24112021.pdf" target="_blank">Vision 2030</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Administration</a>
+                        <div class=" ab Administration-HOVER  ">
+                            <ul>
+                                <li><a href="/boarOfGov.html">Board of Governers</a> </li>
+                                <li><a href="/chairperson.html">Chairpersion</a></li>
+                                <li><a href="/director.html">Director</a></li>
+                                <li><a href="/deans.html">Deans</a></li>
+                                <li><a href="/registrar.html">Registrar</a></li>
+                                <li><a href="/senat.html">Senat</a></li>
+                                <li><a href="/workCommeeti.html">Building and Work Committee</a></li>
+                                <li><a href="/financeCommeetti.html">Finance Committee</a></li>
+                                <li><a href="">Administrative Staff</a></li>
+                                <li><a href="/community.html">Committees</a></li>
+                                <li><a href="">Faculty List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Department</a>
+                        <div class=" ab Department-HOVER  ">
+                            <ul>
+                                <li><a href="/IT.html">Information Technology</a></li>
+                                <li><a href="/appliedGeoligy.html">Applied Geology</a></li>
+                                <li><a href="/architecture.html">Department of Architecture & Planning</a></li>
+                                <li><a href="/bioMed.html">Biomedical Engineering</a></li>
+                                <li><a href="/bioTech.html">Bio Technology</a> </li>
+                                <li><a href="/chem.html">Chemical Engineering</a></li>
+                                <li><a href="/civil.html">Civil Engineering</a></li>
+                                <li><a href="/cse.html">Computer Science & Engineering</a></li>
+                                <li><a href="/chemistry.html">Department of Chemistry</a></li>
+                                <li><a href="/ca.html">Department of Computer Application</a></li>
+                                <li><a href="/math.html">Department of Mathematics</a></li>
+                                <li><a href="/physic.html">Department of Physics</a></li>
+                                <li><a href="/humanity.html">Department of Humanities & Social Sciences</a></li>
+                                <li><a href="/EE.html">Electrical Engineering </a></li>
+                                <li><a href="/ECE.html">Electronics and  Communication Engineering </a></li>
+                                <li><a href="/mech.html">Mechanical Engineering</a></li>
+                                <li><a href="/min.html">Mining Engineering</a></li>
+                                <li><a href="/meta.html">Metallurgical and Materials Engineering</a></li>
+                                <li><a href="/workshop.html">Workshop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="/rersearch.html" class=" dropdownmenu title-link "><span>Research & Consultancy</span></a>
+                    
+                    <div class="dropdownmenu   ">
+                        <a href="" class="title-link">Examination</a>
+                        <div class="ab Examination-HOVER  ">
+                            <ul>
+                                <li><a href="/timeTable.html">Time Table</a></li>
+                                <li><a href="/eduVeri.html">Education Verfication Procedure</a></li>
+                                <li><a href="/notice.html">Notice </a></li>
+                                <li><a href="/result.html">Results</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Facilities</a>
+                        <div class="ab Facilities-HOVER  ">
+                            <ul>
+                            <li><a href="/centarlLibrery.html">Central Library</a></li>
+                            <li><a href="/hostel.html">Hostel</a></li>
+                            <li><a href="/medical.html">Medical Facilities</a></li>
+                            <li><a href="/guest.html">Guest House</a></li>
+                            <li><a href="/campusSecurity.html">Campus Security</a></li>
+                            <li><a href="/EstateOffice.html">Estate Office </a></li>
+                            <li><a href="https://nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf" target="_blank">Charges for Common Facilities</a></li>
+                            <li><a href="/sports.html">Sports</a></li>
+                            <li><a href="/allInOneStore.html">All in One Store</a></li>
+                            <li><a href="/vachan.html">Vachan Milk Parlour and Coffee Day</a></li>
+                            <li><a href="/canteen.html">Canteen and CCD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="https://ccc.nitrr.ac.in/" target="_blank" class="title-link">Centers / Cell</a>
+                        <div class="ab Centers-Cell-HOVER  ">
+                            <ul>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Central Computer Center</a></li>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Career Development Center</a></li>
+                                <li><a href="/educationCell.html">Continuing Education Center </a></li>
+                                <li><a href="https://tpo.nitrr.ac.in/" target="_blank">Training and Placement Cell</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu">
+                        <a href="" class="title-link">Media</a>
+                        <div class="ab Media-HOVER  ">
+                            <ul>
+                                <li><a href="/pmrc.html">PMRC</a></li>
+                                <li><a href="/galary.html">Image Gallery</a></li>
+                                <li><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank">Video Gallery</a></li>
+                                <li><a href="https://nitrr.ac.in/mediapress.php" target="_blank">Press Clipping</a></li>
+                                <li><a href="/mirror.html">Mirror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.nitrrfie.in/" target="_blank" class=" title-link ">NITRRFIE</a>
+            </div>
+            <div class="hline"></div>
+        </div>
+
+        <!-- Page Content -->
+       <div class="h-[4800px] flex justify-center">
+            <div class="w-[1100px]">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                    <div class="container-fluid">
+
+                 
+              </div> 
+             <br>
+
+             <div class="tab-content">
+ <div id="home" class="tab-pane fade in active">
+   <div class="panel panel-primary">
+     <div class="panel-heading font-mullish font-extrabold text-2xl pb-[10px]">Circulars &amp; Notice For Employees</div>
+     <div class="panel-body">
+       <ul style=" list-style-image: url('img/gear.png');list-style-position: inside;">
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Award</b></u></h3>
+
+
+
+
+           
+             <li class="text-blue-500 " style="">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award (April-June 2023)
+             <ul>
+               <li><a href="downloads/notice/2023/Circular for Employee of the Second Quarter Award.pdf"> Circular for Employee of the Second Quarter Award </a></li>
+               <li><a href="downloads/notice/2023/Application Format21-06-2023.docx"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+
+
+             </li><li class="text-blue-500 ">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award
+             <ul>
+               <li><a href="downloads/notice/2023/Circular for Employee of the Quarter Award (20.03.2023).pdf"> Employee of the Quarter Award. </a></li>
+               <li><a href="downloads/notice/2023/Application Format for Employee of the Quarter Award (20.03.2023).pdf"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+
+
+
+             </li><li class="text-blue-500 ">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award 
+             <ul>
+               <li><a href="downloads/notice/2022/Circular for Employee of the Quarter Award (Oct-Dec 2022).pdf"> Employee of the Quarter Award. </a></li>
+               <li><a href="downloads/notice/2022/Format for Application Employee (Non- Teaching) of the Quarter award.pdf"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+
+
+
+             </li><li class="text-blue-500 ">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award 
+             <ul>
+               <li><a href="downloads/notice/2022/Circular for the Award 'Employee of the Quarter (July-September, 2022).pdf"> Employee of the Quarter Award. </a></li>
+               <li><a href="downloads/notice/2022/Format for Application Employee (Non- Teaching) of the Quarter award.pdf"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+
+
+              </li><li class="text-blue-500 ">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award 
+             <ul>
+               <li><a href="downloads/notice/2022/Circular for the Award 'Employee of the Quarter (July-September, 2022).pdf"> Employee of the Quarter Award. </a></li>
+               <li><a href="downloads/notice/2022/Format for Application Employee (Non- Teaching) of the Quarter award.pdf"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+
+
+
+
+
+           </li><li class="text-blue-500 ">
+               Invitation for applications for EMPLOYEE (NON-TEACHING) OF THE QUARTER award
+             <ul>
+               <li><a href="downloads/notice/2022/Circular for the Award Employee (Non- Teaching) of the Quarter (1).pdf"> Circular for the Award Employee (Non- Teaching) of the Quarter </a></li>
+               <li><a href="downloads/notice/2022/Format for application Employee (Non- Teaching) of the Quarter award (1).pdf"> Format for application Employee (Non- Teaching) of the Quarter award</a></li>                
+             </ul>
+             </li><li><a class="text-blue-500 " href="downloads/notice/2019/circular for best student best faculty awardRD2019.jpeg">Anounced by the Director Sir on Republic Day for Initiation of Best Student, Best Faculty, Best Department/Section award .</a></li>
+           
+
+          </ul><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>CPDA</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/notice/2021/order-allotment-cpda-new joinees.jpg"> Office Order regarding Allotment of CPDA to new Faculty members of the Institute. </a></li>     
+           <li><a class="text-blue-500 " href="downloads/notice/2014/Notice (Regarding Leaves).pdf">Notice regarding CPDA, LTC and availing of Leave </a></li>
+          </ul><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Income Tax</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/notice/2021/Notice No. 1347 Dated 11.11.2021.pdf"> Submission of Employees Income Tax Declaration for the FY 2021-22 through MIS portal </a></li> 
+          </ul><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Children Education Allowance</b></u></h3>
+
+          <li><a class="text-blue-500 " href="downloads/notice/2024/NOTICE-Children Education Allowance (Year 2023-24).pdf">NOTICE-Children Education Allowance (Year 2023-24)</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+
+           <li><a class="text-blue-500 " href="downloads/notice/Notice- Children Education Allowance Year 2022-23.pdf">NOTICE-Children Education Allowance (Year 2022-23) .</a></li> 
+           <li><a class="text-blue-500 " href="downloads/notice/Notice for Children Education Allowance 2021-22.pdf">NOTICE-Children Education Allowance (Year 2021-22).</a></li>  
+ 
+           <li><a class="text-blue-500 " href="downloads/notice/2021/CEA-Notice.PDF"> Notice pertaining to Children Education Allowance. </a></li>      
+           <li><a class="text-blue-500 " href="downloads/notice/2019/Notice of CEA.pdf"> NOTICE -Child Education Allowance . </a></li>
+          </ul><br><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Medical Facility</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/notice/2018/List of AMAs approved by the 38th meeting of Board for Medial Facility.pdf">List of AMAs approved by the 38th meeting of Board for Medial Facility</a></li>
+           
+          </ul><br>
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Special Casual Leave</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Addendum for Special Casual Leave.pdf">Addendum for Special Casual Leave.</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Special Casual Leave.jpg">Special Casual Leave for faculty members</a></li>
+          </ul><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Miscellaneous Rules</b></u></h3>
+
+
+
+           <li><a class="text-blue-500 " href="downloads/notice/HOUSE ALLOTEMENT RULE.pdf">House Allotment Rule of NIT Raipur</a></li>
+           <li><a class="text-blue-500 " href="downloads/notice/NOTIFICATION.pdf">NOTIFICATION : Amendment in House Allotment Rules</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/cec_process.pdf">Institutional procedure for organization of Short term training Programs/Seminars/Conference/Workshops/Any other Academic activity</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/MEDICAL ATTENDANCE RULES.pdf">Central Services (Medical Attendance) Rules</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/CONDUCT RULES.pdf">CCS Conduct Rules</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/LEAVE RULES.pdf">CCS Leave Rules</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/MRR_Faculty.pdf">Model Recruitment Rules for Faculty </a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Recruitment Rules 2019 for Non- Faculty.pdf">Model Recruitment Rules for Non-Faculty </a></li>
+           <li><a class="text-blue-500 " href="downloads/misc/Overhead cost2.pdf">Rules for use of Over head charges</a></li>
+          </ul><br>
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Leave Travel Concession</b></u></h3>
+
+
+
+           <li><a class="text-blue-500 " href="downloads/notice/2022/GoI-DoE-MoF-16062022.pdf">MoF OM dated 16.06.2022 pertaining to the instructions regarding the booking of tickets by the employees for air travel.</a></li>
+
+           <li><a class="text-blue-500 " href="downloads/notice/2020/queries in respect of special cash offer-FAQ 2.PDF">Updated latest Clarification regarding queries being received in respect of Special cash package equivalent of Leave Travel Concession Fare for Central Government Employees during the Block 2018-21(FAQ No. 2).</a></li>
+           <li class="text-blue-500 " >Special Cash Package" in lieu of LTC during block 2018-2021.
+           </li>
+           <ul>
+           <li><a class="text-blue-500 " href="downloads/notice/2020/LTC Special Cash Package Circular.PDF">Circular- 'Special Cash Package Scheme' in lieu of LTC during block 2018-2021. </a></li>
+           <li><a class="text-blue-500 " href="downloads/notice/2020/Application form for 'Special Cash Package Scheme' and 'EL Encashment' in lieu of LTC.docx"> Application for ‘Special Cash Package Scheme’ in lieu of LTC and Application for Encashment of EL under ‘Special Cash Package’ in lieu of LTC.  (MS Word Format).</a></li> 
+           <li><a class="text-blue-500 " href="downloads/notice/2020/Reimbursement form for Special Cash Package Scheme in lieu of LTC_New.docx">Reimbursement form for ‘Special Cash Package Scheme’ in lieu of LTC.  (MS Word Format).</a></li>
+           <li><a class="text-blue-500 " href="downloads/notice/2020/Relevant GOI OMs for 'Special Cash Package Scheme'.pdf">Relevant GOI OMs for 'Special Cash Package Scheme'.
+           </a></li> 
+           </ul>
+           <li><a class="text-blue-500 " href="downloads/forms/faculty/GUIDELINES FOR RELAXATION TO TRAVEL BY AIRLINES OTHER.pdf">Guidelines for Relaxation to Travel by Airlines other than Air India
+           </a></li>
+
+           <li><a class="text-blue-500 " href="downloads/forms/faculty/Relaxation to travel by Air to Visit J&amp;K under LTC 08.10.2020.PDF">Relaxation to travel by air to visit North East Region, Union Territory of Jammu &amp; Kashmir, Union Territory of Ladakh and Andaman &amp; Nicobar Islands—extension beyond 25.09.2020
+
+           </a></li>
+
+
+
+           <li><a class="text-blue-500 " href="downloads/forms/faculty/OM office LTC Jan 18.pdf">Circular - Office Memorandum -Travel entitlements of Government employees for the purpose of LTC post Seventh Central Pay Commission-clarification-reg Attachment - LTC Office Memorandum - Dated 18.1.2018-LTC
+           </a></li>
+
+
+         <li><a class="text-blue-500 " href="downloads/forms/faculty/Central Civil Services (Leave Travel Concession) Rules, 1988 -Relaxation to travel by air to visit NER and A&amp;N.pdf">Central Civil Services (Leave Travel Concession) Rules, 1988 -Relaxation to travel by air to visit NER and A&amp;N</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/Procedure for booking of air-tickets on LTC-Clarification reg..pdf">Procedure for booking of air-tickets on LTC-Clarification Reg.</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/AIR Travel under LTC.pdf">AIR Travel under LTC -I</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/AIR Travel under LTC1.pdf">AIR Travel under LTC -II</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/faq_ltc.PDF">FAQ LTC </a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/Declaration of Home Town under LTC Rules.pdf">Declaration of Home Town under LTC Rules </a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/FAQ ON LTC ROAD TRAVELS.pdf">FAQ ON LTC ROAD TRAVELS</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/LTC chap-9.pdf">LTC CHAPTER-9 </a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/Relaxation to travel by private airlines for LTCOfficial Purpose.pdf">Relaxation to travel by private airlines for LTC/Official Purpose</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/RELAXATION of travel by private airlines-28112014.pdf">Relaxation to travel by private Airlines to Visit J&amp;K under LTC</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/31011_7_2013-Estt.A-IV-26092014.pdf">FAQs on LTC entitlements of a Fresh Recruit (from DOPT)</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/faculty/FAQ on HOMETOWN.pdf">Frequently Asked Questions on LTC related to Home-Town</a></li>
+             <li><a class="text-blue-500 " href="downloads/forms/admin/LTC Circular 22.07.2013.pdf"> LTC Circular </a></li>
+          </ul><br>
+
+          
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>4-tier Faculty Structure</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Four-Tier Norms and Revised RRs - amendment .pdf">MHRD’s O.M. Ref. No. F.No.33-9/2011-TS.III dated 28th January 2014  regarding Implementation of 4-tier flexible faculty structure in National Institutes of Technology (Nits) - Amendment - Reg.</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Four-Tier Norms and Revised RRs .pdf">MHRD’S o.M. Ref. No. F.No.33-9/2011-TS.III dated 15th January 2014
+           regarding Implementation of 4-tier flexible faculty structure in National
+           Institutes of Technology (Nits)</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Four-Tier faculty structure.pdf">Four-Tier faculty structure</a></li>
+          </ul><br>
+
+
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Others</b></u></h3>
+           <li><a class="text-blue-500 " href="downloads/forms/faculty/KAKODKAR_COMMITTEE_REPORT-for-NITs.pdf">KAKODKAR COMMITTEE REPORT NITs: As drivers for quality higher technical education- The way forward</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/faculty/Kakodkar-committee-report-on-NITs-presentation.pdf">KAKODKAR COMMITTEE REPORT PRESENTATION: NITs as drivers of quality higher technical education- The way forward</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/DOPT OM on Service Matters (English)31-08-2013-Estt-A-III-Eng (2).pdf">'Representation from Government Servant on Service matters(English)</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/DOPT OM on Service Matters(Hindi)31-08-2013-Estt-A-III-Hindi (1).pdf">'Representation from Government Servant on Service matters(Hindi)</a></li>
+           <li><a class="text-blue-500 " href="downloads/forms/admin/Notice regarding joint representation 001.jpg">Notice Related to Joint Representations</a></li>
+
+          </ul><br>
+          <ul style="color: red">
+           <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>Archive</b></u></h3>
+           <li  class="text-blue-500 ">Pension Adalat to be conducted as on 23rd August 2019 at NIT Raipur
+           </li>
+           <ul>
+           <li><a class="text-blue-500 " href="downloads/notice/2019/Notice.pdf">Notice 
+           </a></li>
+           <li><a class="text-blue-500 " href="downloads/notice/2019/Pension adalat ad.pdf">News Paper advertisement  
+           </a></li>
+           </ul>
+
+           <li><a class="text-blue-500 " href="downloads/ccc/ccc_inaugural_n_timing_notice.pdf">Notice Reg. Central Computer Center Inaugural and Timings</a></li>
+
+
+
+           <li><a class="text-blue-500 " href="downloads/notice/2018/list_cashless treatment in the hospitals.pdf">Circular for cashless treatment in the hospitals.</a></li>
+           <li><a class="text-blue-500 " href="downloads/antiragging/Womens Grievance Cell.pdf">Women’s Grievance Cell </a></li>
+           <li><a class="text-blue-500 " href="downloads/ccc/ccc_inaugural_n_timing_notice.pdf">Notice Reg. Central Computer Center Inaugural and Timings</a></li>
+
+          </ul><br>
+               
+               
+ 
+
+
+
+       
+
+
+
+<!--<li><a href="downloads/forms/admin/Holidays List Year 2018.PDF">list of holidays for the year 2018 </a></li>
+<li><a href="downloads/forms/admin/Holiday_List_2017.pdf">list of holidays for the year 2017 </a></li>-->
+<!--<li><a href="downloads/forms/admin/List of Holidays2016.pdf">list of holidays for the year 2016 </a></li>-->
+
+<!--<li><a href="downloads/misc/yoga notice.pdf">Circular on "International day of Yoga"</a></li> -->
+
+
+
+<!-- <br><ul style="list-style-type:disc;"><b style="font-weight:bold;font-size:large;">Informations/GOI OMs on LTC matters</b><br>
+-->
+
+
+
+
+<br>
+
+
+
+ <br>
+ 
+
+
+
+
+
+
+
+
+
+
+<!-- <li><a href="har.php" target="_new">N.I.T. House Allotment Rules, 2012 </a></li><br /> -->
+<!--<li><a href="downloads/notice/procedure of payment.pdf">Notice for students regarding the change in the procedure of fees payment</a></li>  -->
+
+
+</ul>
+
+
+
+     </div>
+   </div>
+ </div>
+
+
+
+
+ <div id="menu2" class="tab-pane fade">
+   <div class="panel panel-primary">
+     <div class="panel-heading font-mullish font-extrabold text-3xl pb-6">Circulars &amp; Notice For Students</div>
+     <div class="panel-body">
+               <ul style=" list-style-image: url('img/gear.png');list-style-position: inside;">
+
+
+
+
+
+
+
+
+<h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>FEES / ADMISSION</b></u></h3><br> 
+
+<!--<li><a href="http://nitrr.ac.in/downloads/admission/admission2022/Spring Semester Registration schedule 001.jpg">Notice regarding late registration in Spring semesters (Session 2022-23)</a></li>-->
+<li><a class="text-blue-500 " href="http://nitrr.ac.in/downloads/admission/admission2022/ug/FIRST YEAR1 001.jpg">Permission to leave the station</a></li>
+
+<li><a class="text-blue-500 " href="http://nitrr.ac.in/downloads/admission/admission2022/pg/M.Tech. admission 2022(Sponsored category) list.pdf">M.Tech. admission 2022(Sponsored category) list</a></li>
+
+<li><a class="text-blue-500 " href="downloads/Circular 02.08.2022.jpg">Circular regarding registration for 5th, 7th semester B.Tech./B. Arch./MCA; 3rd semester MCA and M. Tech.</a></li>       
+
+<li><a class="text-blue-500 " href="downloads/notice/2022/Notice - Open Elective Basketing.pdf">Regarding Basketing of Open Elective Subjects.</a></li>
+
+<li><a class="text-blue-500 " href="downloads/notice/2022/NOTICE_791.pdf">Circular regarding the last date of registration in 5th, 7th semester B.Tech./B.Arch/MCA; 3rd semester MCA and M.Tech.</a></li>      
+
+<li><a class="text-blue-500 " href="downloads/notice/2021/NOTICE-Student Fee related.jpg">Notice for payment of due fees to students who have taken admission on undertaking in the Autumn 2021 semester.</a></li>      
+
+
+<li class="text-blue-500 ">The 7th Semester (NIT) UG and 9th Semester (NIT, B. Arch.) registrations have started. Students are advised to kindly contact their respective department Heads or Faculty In-charges for completing the admission process.</li> 
+<li><a class="text-blue-500 " href=" downloads/notice/2016/notice for fake call.pdf">Notice Regarding fake calls for admission into UG Programs </a></li>   
+
+
+<li><a class="text-blue-500 " href="downloads/notice/2021/Refund Notice (JoSAA-CSAB 2020-21).pdf">Notice regarding Refund of balance amount (JoSSA/CSAB) to the eligible students who were admitted in B.Tech/B.Arch Programme  2020-21.</a></li>      
+
+
+<li><a class="text-blue-500 " href="downloads/notice/2021/URGENT NOTICE JOSAA 2020-21new08042021.pdf">Notice regarding Refund of balance amount (JoSSA/CSAB) to the eligible students who were admitted on B.Tech/B.Arch Programme 2020-21.</a></li>      
+
+   <li><a class="text-blue-500 " href="downloads/notice/2021/January 2021 semester registration for UG, PG courses_06012021.pdf">January 2021 Semester Registration for UG,PG Courses</a></li>              
+<li><a class="text-blue-500 " href="downloads/notice/2015/Procedure for refund of Caution Money.pdf">Procedure for refund of Caution Money</a></li> <br>       
+
+<h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>SCHOLARSHIP</b></u></h3><br>      
+
+<li><a class="text-blue-500 " href="downloads/notice/2024/Summer Internship Opportunities at NIT Raipur - 2024.pdf">Summer Internship Opportunities for Year 2024</a></li>
+
+   <li><a class="text-blue-500 " href="downloads/notice/2024/Sh. Manghandas &amp; Smt. Sundari Devi Hablani Memorial Scholarship.pdf">Sh. Manghandas &amp; Smt. Sundari Devi Hablani Memorial Scholarship</a></li>
+   <li><a class="text-blue-500 " href="downloads/notice/2020/NOTICE- CG POST MATRIC SCHOLARSHIP 2020.pdf">NOTICE- CG POST MATRIC SCHOLARSHIP 2020</a></li>
+   <li><a class="text-blue-500 " href="downloads/notice/2020/NOTICE NSP PORTAL.pdf">Notice regarding National Scholarship Portal </a></li>
+<li><a class="text-blue-500 " href="downloads/notice/2019/Notice NSP Scholarship_25072019.pdf">Notice NSP Scholarship 2019-20</a></li>
+<li><a class="text-blue-500 " href="downloads/notice/2019/Nsp scholarship_25072019.pdf">National Scholarship for Higher Education for ST Students 2019-20.</a></li>
+<!--<li><a href="downloads/notice/2023/Dr. M L Kathuriya & Smt. Pramila Devi Kathuriya Memorial Scholarship29-09-2023.pdf">Notice: Dr. M L Kathuriya & Smt. Pramila Devi Kathuriya Memorial Scholarship</li>
+
+      <ul>
+  <li><a href="downloads/notice/2023/Preamble.pdf">Preamble</a></li>
+
+
+      </ul>
+
+-->
+
+
+
+<br>      
+
+
+
+<h3 class="font-mullish font-bold text-2xl pb-4"  style="color: red"><u><b>CORONAVIRUS (COVID-19)</b></u></h3><br>      
+
+
+
+   <li><a class="text-blue-500 " href="downloads/notice/2020/Office Order -389new.pdf">* Office Order 389 - Coronavirus (COVID-19)* new </a></li>
+
+<li><a class="text-blue-500 " href="downloads/notice/2020/covid19_notice_ext.pdf">Notice in continuation to the earlier notice no. NITRR/2020/374 dated 13/03/2020 regarding precautionary measures for the Coronavirus (COVID-19)</a></li>
+<li><a class="text-blue-500 " href="downloads/notice/2020/374_COVID advisory 13.3.2020.pdf">Extension in Mid-semester break due to Coronavirus (COVID-19)</a></li>
+<li><a class="text-blue-500 " href="downloads/notice/2020/Notice-Coronavirus.pdf">Suspension of Ph.D Oral Defence Viva-Voce examination due to Coronavirus(COVID-19).</a></li><br>      
+
+
+<h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>AWARDS/PRIZES/FELLOWSHIP</b></u></h3><br>      
+
+
+<li><a class="text-blue-500 " href="downloads/notice/2019/National Fellowship for ST Candidates for the year 2019-20.pdf">National Fellowship for ST Candidates for the year 2019-20.</a></li>
+<li><a class="text-blue-500 " href="downloads/notice/2018/Circular on awards.pdf">
+            Circular on Awards/Prizes/Fellowship</a></li>    
+
+<li><a class="text-blue-500 " href="downloads/notice/2019/circular for best student best faculty awardRD2019.jpeg">Anounced by the Director on Republic Day for Initiation of Best Student, Best Faculty, Best Department/Section award .</a></li><br>      
+
+
+
+
+
+
+<h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>CENTRAL AND STATE GOVT. SCHEMES</b></u></h3><br>      
+
+<li><a class="text-blue-500 " href="downloads/notice/2018/Revised guidelines of Central  Sector Interest Subsidy Scheme.pdf">Revised Central Sector Interest Subsidy Scheme (CSIS)</a></li>                
+              
+<li><a class="text-blue-500 " href="downloads/notice/2018/sanchar_kranti_yojana_29052018.pdf">Revised Notice of Chhattisgarh Sanchar Kranti Yojna</a></li>                
+               
+
+<li><a class="text-blue-500 " href="downloads/notice/2018/Revised Guidelines of PMRF Scheme.pdf">
+            Revised Guidelines of PMRF Scheme</a></li> 
+
+<li><a class="text-blue-500 " href="downloads/notice/2018/revised PMRF guideines approved.pdf">
+            Revised PMRF guideines Approved</a></li> <br>      
+
+
+
+
+
+
+
+<h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>GAZETTE NOTIFICATION</b></u></h3><br>      
+
+  <li><a  class="text-blue-500 " href="downloads/notice/2018/letter of incorporation of NIT Raipur_08052018.jpg">Letter of Incorporation of NIT Raipur</a></li>  <br>       
+
+
+
+
+
+  <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>ANTI-RAGGING</b></u></h3>   <br>                
+                     
+
+<li><a class="text-blue-500 " href="downloads/antiragging/Advise 1st Semester Students.pdf">Advise 1st Semester Students</a></li><br>      
+
+
+
+
+
+  <h3 class="font-mullish font-bold text-2xl pb-4" style="color: red"><u><b>OTHER IMPORTANT CIRCULAR</b></u></h3> <br>  
+
+
+
+  <li><a class="text-blue-500 " href="http://nitrr.ac.in/downloads/ccc/ccc_inaugural_n_timing_notice.pdf">Notice Reg. Central Computer Center Inaugural and Timings</a></li>    
+
+<li><a class="text-blue-500 " href="downloads/notice/2015/Notice (Student Insurance).jpg">Notice (Student Insurance)</a></li>                        
+<li><a class="text-blue-500 " href="downloads/notice/2015/Uni Study Care Insurance 2014-15.pdf">UNI  STUDY CARE INSURANCE for student of NIT-Raipur</a></li>                        
+                     
+<li><a class="text-blue-500 " href="downloads/notice/2015/Procedure for getting Migration.jpg">Procedure for getting TC/CC/Migration Certificates</a></li>   <br>                           
+
+</ul>
+
+     </div>
+   </div>
+ </div>
+
+</div>
+
+
+   </div>
+            </div>
+       </div>
+        
+
+    <!-- footer -->
+    <div class="hline relative top-[-96px]"></div>
+
+    <div class="quick-link-footer h-[520px] relative top-[-96px] bg-[#212529] grid grid-cols-2 overflow-x-hidden">
+        <div class="footer-left ">
+            <h2 class=" justify-center font-mullish text-white text-2xl font-bold pt-[30px] pl-[300px] pb-[30px]">Quick Link</h2>
+            <div class="h-1 w-[700px] relative left-[30px]  bg-white"></div>
+            <div class="flex justify-center relative left-[30px] pt-[40px]">
+                <div class="flex flex-col gap-y-3 text-white">
+                    <a href="">NIT Raipur at a Glance</a>
+                    <a href="">Vision 2030</a>
+                    <a href="">MIS</a>
+                    <a href="">MOUs</a>
+                    <a href="">MOOCs</a>
+                    <a href="">NITRR newsletter</a>
+                    <a href="">Year Wise Topper List</a>
+                    <a href="">NIT Act , Statues and Office Memorandum</a>
+                    <a href="">E-Booklet</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Web OPAC</a>
+                    <a href="">ICC</a>
+                    <a href="">RTI</a>
+                    <a href="">TEQIP III</a>
+                    <a href="">Shilpi</a>
+                    <a href="">Research Newsletter NIT Raipur</a>
+                    <a href="">SWAYAM Free Online Education</a>      
+                    <a href="">Pledge Certificate</a>
+                    <a href="">Institute Alumnus Awards</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Annual Report</a>
+                    <a href="">Unnat Bharat Abhiyan At NITRR</a>
+                    <a href="">Anti ragging System</a>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Industry Institute Collaboration Cell(IICC)</a>        
+                    <a href="">National Academic Depository(NAD)</a>
+                    <a href="">NIT Raipur Liberary Discovery</a>
+                    <a href="">Institute Innovation and Start up Policy</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe class="relative top-[90px] left-[100px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083284962!2d81.60245417521736!3d21.249722180455397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1712469817699!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+    </div> 
+
+    <!-- last-footer -->
+    <div class="hline relative top-[-96px]"></div>
+    <div class="last-footer relative pt-[40px] pb-[40px]  pr-[40px] top-[-96px] bg-[url(https://nitw.ac.in/api/static/files/green_bg_2024-2-29-18-13-29.jpg)] grid grid-cols-2">
+        <div class="last-footer-left pl-[100px]">
+            <h1 class="font-mullish text-black text-4xl font-bold pb-[30px]">Contact Us</h1>
+            <div class="bg-black h-1 w-[300px] "></div>
+            <div class="pt-[20px]">
+                <img src="./images/nitrr-logo.png" alt="" width="100px">
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">+91-870-xxxxxxx,+91-870-xxxxxxx</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">registrar@nitrr.ac.in</span></div>
+                <div class="flex pt-[20px] gap-[20px]">
+                    <a href="">
+                        <img src="./images/facebook2.png" alt="" width="40px">
+                    </a>
+                    <a href=""><img src="./images/twitter2.png" alt="" width="40px"></a>
+                    <a href=""><img src="./images/google.png" alt="" width="57px" class="relative top-[4px]"></a>
+                    <a href=""><img src="./images/insta2.png" alt="" width="40px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer-right pr-[80px]">
+            <h1 class="font-mullish text-black text-4xl pb-[20px]  font-bold">National portals</h1>
+            <div class="h-1 w-[400px] bg-black"></div>
+            <div class="grid grid-cols-3 gap-4 pt-[30px]">
+                <a href=""><img src="https://nitw.ac.in/media/files/moe.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/dii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/mii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/swach_bharath.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/fit_india.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/digilocker_nad.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

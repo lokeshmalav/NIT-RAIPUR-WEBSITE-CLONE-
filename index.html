@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITRR</title>
+    <link rel="stylesheet" href="main.css">
+
+    <!-- extra links  -->
+    <!-- heading font -->
+
+    <!-- use as " font-family: "Oswald", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- h font end -->
+    <!-- small font -->
+    <!-- use as"font-family: "Quicksand", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- s font end -->
+    <link rel="preconnect" href="https://font.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script scr="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@400;700&amp;family=Rubik:wght@400;500&amp;family=Open+Sans:wght@400;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- extra link ends -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .clg-name{
+            display: flex;
+            flex-direction: column;
+            align-content:space-between ;
+            gap:5px;
+            opacity: 0.8;
+        }
+        .clg-title{
+            padding-top: 1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            width:100%vw;
+            height:9rem;
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        .head-search{
+            text-decoration: none;
+            position: relative;
+            left:60px;
+            
+        }
+        .nit-title{
+            
+            font-weight: bold;
+        }
+        .hindi-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #main-title{
+            font-size: 25px;
+            font-family: "Merriweather", serif;
+        }
+        #sub-main-title{
+            
+            font-size: 17px;
+        }
+        .sticky{
+            position: sticky;
+            top:0px;
+            z-index: 990;
+            
+        }
+        .head-link{
+            height:5rem;
+            width:100%vw;
+            /* display:flex;
+           padding-left: 30px;
+           padding-right: 30px;
+            align-items: center;
+            justify-content:space-evenly;
+            gap:50px; */
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        #home-icon{
+        transform: scale(1.75);
+        text-decoration-color:  solid rgb(241, 97, 39);
+        }
+        .title-link{
+            color: black;
+            text-decoration: none;
+            font-weight:500;
+            font-size: 18px;
+            
+            
+        }
+        .title-link:hover{
+            color: rgb(241, 97, 39);
+        }
+        .hline{
+            border-bottom: 7px solid rgb(241, 97, 39);
+        }
+        .img-slider{
+            height:33rem;
+            background-image: url(./images/ECLECTIKA1.jpg);
+            background-size: cover;  
+            background-position: center;
+            animation-name: sliding-img;
+            animation-duration: 18s;
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes sliding-img {
+            0%{
+            
+            }
+            25%{
+                
+                background-image: url(./images/ECLECTIKA2.jpg);
+            }
+            50%{
+                background-image: url(./images/ECLECTIKA3.jpg);
+
+            }
+            75%{
+                background-image: url(./images/ECLECTIKA4.jpg);
+            }
+            100%{
+                background-image: url(./images/ECLECTIKA1.jpg);
+            }
+        }
+        .dropdownmenu{
+            display: inline-block;
+            position: relative;
+        }
+        .INSTITUTE-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .INSTITUTE-HOVER{
+            display: block;
+        }
+        .INSTITUTE-HOVER li{
+            display: block;
+        }
+        .INSTITUTE-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+
+        }
+        .Administration-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Administration-HOVER{
+            display: block;
+        }
+        .Administration-HOVER li{
+            display: block;
+        }
+        .Administration-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Department-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Department-HOVER{
+            display: block;
+        }
+        .Department-HOVER li{
+            display: block;
+        }
+        .Department-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Examination-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Examination-HOVER{
+            display: block;
+        }
+        .Examination-HOVER li{
+            display: block;
+        }
+        .Examination-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Facilities-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Facilities-HOVER{
+            display: block;
+        }
+        .Facilities-HOVER li{
+            display: block;
+        }
+        .Facilities-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Centers-Cell-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Centers-Cell-HOVER{
+            display: block;
+        }
+        .Centers-Cell-HOVER li{
+            display: block;
+        }
+        .Centers-Cell-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Media-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Media-HOVER{
+            display: block;
+        }
+        .Media-HOVER li{
+            display: block;
+        }
+        .Media-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        
+        }
+        
+        
+        .ab{
+            background-color:rgb(127, 255, 212,0.7);
+            width: 300px;
+            font-weight: 500;
+            padding-left: 30px;
+        }
+        .scrolling-links,.scrolling-links2,.scrolling-links3,.scrolling-links4,.scrolling-links5,.scrolling-links6 {
+           
+            animation: scroll 4s linear infinite;
+            padding-left: 40px;
+        }
+        .scrolling-links:hover ,.scrolling-links2:hover,.scrolling-links3:hover,.scrolling-links4:hover,.scrolling-links5:hover,.scrolling-links6:hover {
+            animation-play-state: paused;
+        }
+        @keyframes scroll {
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(-100px);
+            }
+        }
+  
+        .scrolling-links  ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* perspective:5 ;
+            z-index: -10; */
+        }
+
+        .scrolling-links ul li ,.scrolling-links2 ul li,.scrolling-links3 ul li,.scrolling-links4 ul li,.scrolling-links5 ul li,.scrolling-links6 ul li  {
+            margin-bottom: 10px; /* Adjust spacing between links as needed */
+        }
+        .scrolling-links ul li a ,.scrolling-links2 ul li a,.scrolling-links3 ul li a,.scrolling-links4 ul li a,.scrolling-links5 ul li a,.scrolling-links6 ul li a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: #000;
+        }
+  
+        .scrolling-links ul li a:hover ,.scrolling-links2 ul li a:hover,.scrolling-links3 ul li a:hover,.scrolling-links4 ul li a:hover,.scrolling-links5 ul li a:hover,.scrolling-links6 ul li a:hover{
+            background-color: #bcfff0; 
+        }
+
+        .director-btn {
+         display: inline-block;
+         border-radius: 4px;
+         background-color: #3d405b;
+         border: none;
+         color: #FFFFFF;
+         text-align: center;
+         font-size: 17px;
+         padding: 16px;
+         width: 130px;
+         transition: all 0.5s;
+         cursor: pointer;
+         margin: 5px;
+        }
+
+        .director-btn span {
+         cursor: pointer;
+         display: inline-block;
+         position: relative;
+         transition: 0.5s;
+        }
+
+        .director-btn span:after {
+         content: '»';
+         color:#FFFFFF;
+         position: absolute;
+         opacity: 0;
+         top: 0;
+         right: -15px;
+         transition: 0.5s;
+        }
+
+        .director-btn:hover span {
+         padding-right: 15px;
+        }
+
+        .director.btn:hover span:after {
+         opacity: 1;
+         right: 0;
+        }
+        .scroller-h{
+            perspective: 15;
+            z-index: 2;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- clg main header start -->
+    <div class="clg-title">
+        <!-- nit logo -->
+        <div class="clg-img "><img src="./images/nitrr-logo.png" alt="img" width="100px"></div>
+        <!-- nit title -->
+        <div class="clg-name flex flex-col ">
+            <p class="hindi-title">राष्ट्रीय प्रौद्योगिकी संस्थान रायपुर</p>
+            <p class="nit-title" id="main-title">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</p>
+            <p class="nit-title" id="sub-main-title">An Institute of National Importance</p> 
+        </div>
+        <div class="head-search">
+            <a href=""><i class="gg-search"></i></i></a>     
+        </div>   
+    </div>
+    
+    <!-- header links -->
+    <div class="sticky">
+        <div class="head-link flex justify-evenly pt-6">
+
+                <a href="/index.html" id="home-icon"  class="title-link relative top-[8px] "><i class="fa fa-home"></i></a>
+
+                <div class="dropdownmenu ">
+                    <a href="" class="title-link inst ">Institute</a>
+                    <div class="ab INSTITUTE-HOVER   ">
+                        <ul>
+                            <li><a href="/gegesis.html">Genesis</a></li>
+                            <li><a href="/institute.html">About Institute</a></li>
+                            <li><a href="https://nitrr.ac.in/downloads/Vision%202030_24112021.pdf" target="_blank">Vision 2030</a></li>
+                        </ul> 
+                    </div>
+                </div>
+                
+                <div class="dropdownmenu ">
+                    <a href="" class="title-link">Administration</a>
+                    <div class=" ab Administration-HOVER  ">
+                        <ul>
+                            <li><a href="/boarOfGov.html">Board of Governers</a> </li>
+                            <li><a href="/chairperson.html">Chairpersion</a></li>
+                            <li><a href="/director.html">Director</a></li>
+                            <li><a href="/deans.html">Deans</a></li>
+                            <li><a href="/registrar.html">Registrar</a></li>
+                            <li><a href="/senat.html">Senat</a></li>
+                            <li><a href="/workCommeeti.html">Building and Work Committee</a></li>
+                            <li><a href="/financeCommeetti.html">Finance Committee</a></li>
+                            <li><a href="">Administrative Staff</a></li>
+                            <li><a href="/community.html">Committees</a></li>
+                            <li><a href="">Faculty List</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dropdownmenu ">
+                    <a href="" class="title-link">Department</a>
+                    <div class=" ab Department-HOVER  ">
+                        <ul>
+                            <li><a href="/IT.html">Information Technology</a></li>
+                            <li><a href="/appliedGeoligy.html">Applied Geology</a></li>
+                            <li><a href="/architecture.html">Department of Architecture & Planning</a></li>
+                            <li><a href="/bioMed.html">Biomedical Engineering</a></li>
+                            <li><a href="/bioTech.html">Bio Technology</a> </li>
+                            <li><a href="/chem.html">Chemical Engineering</a></li>
+                            <li><a href="/civil.html">Civil Engineering</a></li>
+                            <li><a href="/cse.html">Computer Science & Engineering</a></li>
+                            <li><a href="/chemistry.html">Department of Chemistry</a></li>
+                            <li><a href="/ca.html">Department of Computer Application</a></li>
+                            <li><a href="/math.html">Department of Mathematics</a></li>
+                            <li><a href="/physic.html">Department of Physics</a></li>
+                            <li><a href="/humanity.html">Department of Humanities & Social Sciences</a></li>
+                            <li><a href="/EE.html">Electrical Engineering </a></li>
+                            <li><a href="/ECE.html">Electronics and  Communication Engineering </a></li>
+                            <li><a href="/mech.html">Mechanical Engineering</a></li>
+                            <li><a href="/min.html">Mining Engineering</a></li>
+                            <li><a href="/meta.html">Metallurgical and Materials Engineering</a></li>
+                            <li><a href="/workshop.html">Workshop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="/rersearch.html" class=" dropdownmenu title-link "><span>Research & Consultancy</span></a>
+                
+                <div class="dropdownmenu   ">
+                    <a href="" class="title-link">Examination</a>
+                    <div class="ab Examination-HOVER  ">
+                        <ul>
+                            <li><a href="/timeTable.html">Time Table</a></li>
+                            <li><a href="/eduVeri.html">Education Verfication Procedure</a></li>
+                            <li><a href="/notice.html">Notice </a></li>
+                            <li><a href="/result.html">Results</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="dropdownmenu ">
+                    <a href="" class="title-link">Facilities</a>
+                    <div class="ab Facilities-HOVER  ">
+                        <ul>
+                        <li><a href="/centarlLibrery.html">Central Library</a></li>
+                        <li><a href="/hostel.html">Hostel</a></li>
+                        <li><a href="/medical.html">Medical Facilities</a></li>
+                        <li><a href="/guest.html">Guest House</a></li>
+                        <li><a href="/campusSecurity.html">Campus Security</a></li>
+                        <li><a href="/EstateOffice.html">Estate Office </a></li>
+                        <li><a href="https://nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf" target="_blank">Charges for Common Facilities</a></li>
+                        <li><a href="/sports.html">Sports</a></li>
+                        <li><a href="/allInOneStore.html">All in One Store</a></li>
+                        <li><a href="/vachan.html">Vachan Milk Parlour and Coffee Day</a></li>
+                        <li><a href="/canteen.html">Canteen and CCD</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dropdownmenu ">
+                    <a href="https://ccc.nitrr.ac.in/" target="_blank" class="title-link">Centers / Cell</a>
+                    <div class="ab Centers-Cell-HOVER  ">
+                        <ul>
+                            <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Central Computer Center</a></li>
+                            <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Career Development Center</a></li>
+                            <li><a href="/educationCell.html">Continuing Education Center </a></li>
+                            <li><a href="https://tpo.nitrr.ac.in/" target="_blank">Training and Placement Cell</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dropdownmenu">
+                    <a href="" class="title-link">Media</a>
+                    <div class="ab Media-HOVER  ">
+                        <ul>
+                            <li><a href="/pmrc.html">PMRC</a></li>
+                            <li><a href="/galary.html">Image Gallery</a></li>
+                            <li><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank">Video Gallery</a></li>
+                            <li><a href="https://nitrr.ac.in/mediapress.php" target="_blank">Press Clipping</a></li>
+                            <li><a href="/mirror.html">Mirror</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="https://www.nitrrfie.in/" target="_blank" class=" title-link ">NITRRFIE</a>
+        </div>
+        <div class="hline"></div>
+    </div>
+    
+    <!-- clg main header ends -->
+    
+    <!-- image slider -->
+    <div class="img-slider"></div>
+    <div class="hline"></div>
+    
+    <!-- about page -->
+    <div class="about pl-10 pr-10 grid grid-cols-2 gap-10 mt-16 mb-10">
+
+        <!-- about nitrr -->
+        <div class="about-nitrr flex  bg-slate-200 rounded-lg ">
+            <div class="left-nit ">
+                <h2 class="text-black font-quicksand pt-4 pl-14 font-bold text-[40px] leading-[1.2] " >ABOUT NITRR</h2>
+                <p class="font-mullish pt-6 pl-9 pr-5 pb-5 font-bold ">
+                    The institute is committed to the challenging task of development of technical education by preparing seasoned 
+                    graduates in highly sophisticated field of engineering and technology. Development of India as an emerging industrial 
+                    power is a demanding exercise as it involves 
+                    the combination of cost effectiveness and efficiency along with producing 
+                    world-class technology at the cutting edge. For about five decades we have been doing it with sincerity and commitment at NIT Raipur. 
+                    At present the institute offers graduate level courses in twelve disciplines.
+                </p>
+                
+            </div>
+            <div class="nit-frame pr-[20px]">
+                <iframe class="relative top-[50px]" width="280" height="315" src="https://www.youtube.com/embed/2qc7Zdl_8tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+        </div>
+
+        <!-- director -->
+        <div class="director-msg bg-slate-100 rounded-lg ">
+            
+            <div class="director-div flex pl-[20px]  ">
+                <div>
+                    <img src="./images/director.jpg" alt="img1" class="h-[315px] w-[900px] relative top-[50px] " >
+                </div>
+                <div>
+                    <h2 class="text-black font-quicksand pt-5 pl-5 font-bold text-[40px] leading-[1.2]">DIRECTOR'S CORNER</h2>
+                    <p class="font-mullish pt-10 pl-9 pr-9 font-bold"><b>Dr. N V Ramana Rao</b><br> 
+
+                        Dr. N V Ramana Rao has taken over the charge as Director, National Institute of Technology raipur (NIT Raipur)
+                         with effect from the forenoon of 8th June, 2023
+                    </p>
+                    <button class="director-btn relative top-[40px] left-[80px]">
+                        <a href="/director.html">READ MORE</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Grid links -->
+    <section class="w-full  
+      relative coreFeature">
+        <div class="relative w-11/12 max-w-[1080] mx-auto pt-2">
+            
+            <div class="w-100% h-1 bg-greenLight mx-auto mt-4 mb-2"></div>
+            
+
+            <!-- grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[4rem] mt-8 pl-10 -z-10">
+                <!-- card1 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/campus.html">
+                        <img src="./images/campus.webp" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[80px]">Campus Tour</h3>
+                    </a>
+                    
+                   <!-- <p class="font-mullish text-black opacity-80">
+                    Get activated and transact within 2 minutes. Completely online
+                     onboarding with minimum documentation.
+                    </p> -->
+
+                </div>
+
+                <!-- card2 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/achievement.html">
+                        <img src="./images/achievement.png" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[80px]">Achievements</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+
+                <!-- card3 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="https://mis.nitrr.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==" target="_blank">
+                        <img src="./images/MIS.png" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[130px]">MIS</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card4 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/result.html">
+                        <img src="./images/result2.png" alt="" width="150px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[105px]">Result</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card5 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/recruitment.html">
+                        <img src="./images/recruitment.jpg" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[90px]">Recruitment</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card6 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/galary.html">
+                        <img src="./images/galary.webp" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[110px]">Gallary</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card7 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/download.html">
+                        <img src="./images/download.png" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[100px]">Download</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card8 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/student.html">
+                        <img src="./images/students.jpg" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[110px]">Student</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card9 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/circular.html">
+                        <img src="./images/notice.jpg" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[110px]">Circulars</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card10 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="https://csab.nic.in/" target="_blank">
+                        <img src="./images/CSAB.png" alt="" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[120px]">CSAB</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card11 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="/ccmt.html">
+                        <img src="./images/Building.png" alt=" " width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[85px]">CCMT/CCMN</h3>
+                    </a>
+                    
+                   
+
+                </div>
+
+                <!-- card12 -->
+                <div class="bg-[url(./images/instant-settlement-bg.svg)] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200
+                hover:bg-[url(./images/instant-settlement-bghover.svg)] w-full max-h-[300px]">
+
+                    <a href="">
+                        <img src="./images/building 2.png" alt="" width="100px" class="mx-auto">
+
+                        <h3 class=" font-mullish text-black text-lg font-bold my-4 pl-[105px]">NIMSET</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- scrolling link -->
+    <div class="w-100% h-1 bg-greenLight relative top-[40px] mx-auto mt-4  mb-2"></div>
+    <span class="scroller-h bg-green-500 inline-block flex justify-center items-center relative top-[138px] h-[50px] font-mullish font-bold left-[60px] w-[400px]">Important Links</span>
+    <span class="scroller-h bg-blue-400 inline-block flex justify-center items-center relative top-[90px] h-[50px] font-mullish font-bold left-[530px] w-[400px]">Academics</span>
+    <span class="scroller-h bg-pink-300 inline-block flex justify-center items-center relative top-[40px] h-[50px] font-mullish font-bold left-[1000px] w-[400px]">Announcement</span>
+    <span class="scroller-h bg-yellow-300 inline-block flex justify-center items-center relative top-[344px]  h-[50px] font-mullish font-bold  left-[60px] w-[400px]">Tender</span>
+    <span class="scroller-h bg-orange-400 inline-block flex justify-center items-center relative top-[294px]  h-[50px] font-mullish font-bold left-[530px] w-[400px]">Notice</span>
+    <span class="scroller-h bg-red-400 inline-block flex justify-center items-center relative top-[248px]  h-[50px] font-mullish font-bold left-[1000px] w-[400px]">Events</span>
+    <div class=" h-[650px] grid grid-cols-3 pt-[40px] gap-y-[100px] pl-[60px] relative top-[-150px] ">
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+            
+            
+            <div class="scrolling-links" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">Online Fee Payment</a></li>
+                  <li><a href="#">14th Convocation</a></li>
+                  <li><a href="#">UG First Year</a></li>
+                  <li><a href="#">Appeal for Donation</a></li>
+                  <li><a href="#">Covid-19 Notice / Orders</a></li> 
+                  <li><a href="#">Research & Consultancy</a></li>
+                  <li><a href="#">NITRRFIE</a></li>
+                  <li><a href="#">Adminstration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+            
+            <div class="scrolling-links2" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">Admission & Fee Structure</a></li>
+                  <li><a href="#">Ordinances</a></li>
+                  <li><a href="#">Calender/Notice/Time-Table</a></li>
+                  <li><a href="#">Syllabus</a></li>
+                  <li><a href="#">How to Apply</a></li>
+                  <li><a href="#">Result</a></li>
+                  <li><a href="#">Departments</a></li>
+                  <li><a href="#">MIS</a></li>
+                 
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+           
+            <div class="scrolling-links3" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">Application are invited fromUG/PG students for 2 months intership in Department of Biomedical Engineering</a></li>
+                  <li><a href="#">Advertisment for the post of One Project Fellow (PF) in CGCOST Project</a></li>
+                  <li><a href="#">Advertisment for the post of One Juniro Fellow (JRF) in DST Funded Project
+                                Advertisment for the post of One Research Associative (RA) in DST Funded Project
+                  </a></li>
+                  <li><a href="#">Advertisment for Walk-in-Interview for JRF</a></li>
+                  <li><a href="#">Application are invited for the post of a Junior Research Fellow in the  Department pf Biology Engineering. </a></li>
+                  <li><a href="#">Design and Implementation of financial tracking and management e-platform for charterd professional accountant.</a></li>
+                  <li><a href="#">Recruitment Notice for the post of Technical Assistent(Architecture & Bio-Medical Engg)</a></li>
+                  <li><a href="#">Recruitment Notice for Part-Time faculty (minning Engineering Department) . Last date of form submission :10th feb.</a></li>
+                  <li><a href="#">Recruitment notice for Temporal Faculty , Teaching Assistant and Part-Time faculty .</a></li>
+                
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+            
+            <div class="scrolling-links4" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">Regarding waterproofing work in Mahanadi Hostel Building at NIT campus Raipur</a></li>
+                  <li><a href="#">Regarding mosquito jali door work in all D,E,F,G type and warden quarters of NIT Raipur</a></li>
+                  <li><a href="#">Various Electrical works in VIP Guest House NIt Raipur</a></li>
+                  <li><a href="#">Construction of two large rooms for academiv purposes at the space adjacent to Makerspace of NIT Raipur</a></li>
+                  <li><a href="#">Construction work of temporary rooms with a roof-top temporary shed for the Department of Mathematics 
+                    and Biomedical Engineering behind the Institute car parking at NIT Raipur (first call).</a></li>
+                  <li><a href="#">Limited Tender for "Lab Equipment for Information Technology"</a></li>
+                  <li><a href="#">Regarding various civil repair &amp; maintenance works (bathroom outlet pipe line, water supply main line, parking shed painting, boundary 
+                    wall colour washing, tiles and granite works) in Indrawati hostel at NIT campus Raipur (first call)."</a></li>
+                  <li><a href="#">Transformer oil filtration and oil top up work of NIT Raipur (first call) </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+            
+            <div class="scrolling-links5" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">Shraman Foundation Scholarship</a></li>
+                  <li><a href="#">Time Table for B.Tech. II nd Sem-Make up Mid Sem Exam Spring 2024</a></li>
+                  <li><a href="#">Minority Scholarship (Biometric Authentication) 2023-24.</a></li>
+                  <li><a href="#">Girls’ Hostel Admission Notice regarding UG PG Session 2024 - 25</a></li>
+                  <li><a href="#">Summer Internship Opportunities for Year 2024</a></li>
+                  <li><a href="#">Sh. Manghandas &amp; Smt. Sundari Devi Hablani Memorial Scholarship</a></li>
+                  <li><a href="#">Notice regarding Registration and fee payment for ongoing spring semesters.</a></li>
+                  
+                  
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-100 h-[250px] w-[400px] overflow-y-auto ">
+           
+            <div class="scrolling-links6" onmouseenter="stopScroll()" onmouseleave="startScroll()">
+                <ul>
+                  <li><a href="#">One Week SERB sponsored Karyashala - �High End Workshop on Materials and Mechanics for Biomedical Applications� from April 30 to May 6, 2024</a></li>
+                  <li><a href="#">2nd Student National Conference on Socio-economic Perspective on Sustainable Management of Water (SPSMW-22nd March 2024)</a></li>
+                  <li><a href="#">Five-day Bootcamp on Ethical Hacking &amp; Digital Forensics Organized by Department of Computer Science &amp; Engineering National Institute of Technology Raipur 27 th - 31 st May, 2024</a></li>
+                  <li><a href="#">&nbsp;Introduction to NGS Analysis using Commander software Date March 4th 2024</a></li>
+
+                  
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Campus life -->
+    <div class="w-[1360px] h-1 bg-greenLight relative top-[-70px] mx-auto mt-4 mb-2"></div>
+    <h1 class="flex justify-center relative top-[-40px] font-mullish text-black text-2xl font-bold">CAMPUS LIFE</h1>
+    <div class="w-8 h-1 relative top-[-40px] bg-greenLight mx-auto mt-4 mb-2"></div>
+    <div class="campus-life overflow-x-hidden">
+       
+       
+        <div class="campus-pic flex  overflow-x-hidden">
+            <a href=""><img src="./images/a14c2563-f1c2-42b8-9a3a-76bbc11c67b0.jpg" alt="" width="400px"  class="hover:grayscale hover:cursor-pointer"></a>
+            <a href=""><img src="./images/0fc0218c-3386-4966-9663-8f61b8043920.jpg" alt="" width="400px" class="h-[450px] hover:grayscale hover:cursor-pointer"></a>
+            <a href=""><img src="./images/f687e490-870d-40d4-82b6-2bcad0ef6912.jpg" alt="" width="400px" class=" relative h-[400px]  hover:grayscale hover:cursor-pointer"></a>
+            <a href=""><img src="./images/702bcc86-cb76-44cc-ba87-c38dafb0cc5d.jpg" alt="" width="400px" class="hover:grayscale hover:cursor-pointer"></a>
+            
+        </div>
+            
+    </div>
+    
+    <!-- footer -->
+    <div class="hline relative top-[-96px]"></div>
+
+    <div class="quick-link-footer h-[520px] relative top-[-96px] bg-[#212529] grid grid-cols-2 overflow-x-hidden">
+        <div class="footer-left ">
+            <h2 class=" justify-center font-mullish text-white text-2xl font-bold pt-[30px] pl-[300px] pb-[30px]">Quick Link</h2>
+            <div class="h-1 w-[700px] relative left-[30px]  bg-white"></div>
+            <div class="flex justify-center relative left-[30px] pt-[40px]">
+                <div class="flex flex-col gap-y-3 text-white">
+                    <a href="">NIT Raipur at a Glance</a>
+                    <a href="">Vision 2030</a>
+                    <a href="">MIS</a>
+                    <a href="">MOUs</a>
+                    <a href="">MOOCs</a>
+                    <a href="">NITRR newsletter</a>
+                    <a href="">Year Wise Topper List</a>
+                    <a href="">NIT Act , Statues and Office Memorandum</a>
+                    <a href="">E-Booklet</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Web OPAC</a>
+                    <a href="">ICC</a>
+                    <a href="">RTI</a>
+                    <a href="">TEQIP III</a>
+                    <a href="">Shilpi</a>
+                    <a href="">Research Newsletter NIT Raipur</a>
+                    <a href="">SWAYAM Free Online Education</a>      
+                    <a href="">Pledge Certificate</a>
+                    <a href="">Institute Alumnus Awards</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Annual Report</a>
+                    <a href="">Unnat Bharat Abhiyan At NITRR</a>
+                    <a href="">Anti ragging System</a>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Industry Institute Collaboration Cell(IICC)</a>        
+                    <a href="">National Academic Depository(NAD)</a>
+                    <a href="">NIT Raipur Liberary Discovery</a>
+                    <a href="">Institute Innovation and Start up Policy</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe class="relative top-[90px] left-[100px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083284962!2d81.60245417521736!3d21.249722180455397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1712469817699!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+    </div> 
+
+    <!-- last-footer -->
+    <div class="hline relative top-[-96px]"></div>
+    <div class="last-footer relative pt-[40px] pb-[40px]  pr-[40px] top-[-96px] bg-[url(https://nitw.ac.in/api/static/files/green_bg_2024-2-29-18-13-29.jpg)] grid grid-cols-2">
+        <div class="last-footer-left pl-[100px]">
+            <h1 class="font-mullish text-black text-4xl font-bold pb-[30px]">Contact Us</h1>
+            <div class="bg-black h-1 w-[300px] "></div>
+            <div class="pt-[20px]">
+                <img src="./images/nitrr-logo.png" alt="" width="100px">
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">+91-870-xxxxxxx,+91-870-xxxxxxx</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">registrar@nitrr.ac.in</span></div>
+                <div class="flex pt-[20px] gap-[20px]">
+                    <a href="">
+                        <img src="./images/facebook2.png" alt="" width="40px">
+                    </a>
+                    <a href=""><img src="./images/twitter2.png" alt="" width="40px"></a>
+                    <a href=""><img src="./images/google.png" alt="" width="57px" class="relative top-[4px]"></a>
+                    <a href=""><img src="./images/insta2.png" alt="" width="40px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer-right pr-[80px]">
+            <h1 class="font-mullish text-black text-4xl pb-[20px]  font-bold">National portals</h1>
+            <div class="h-1 w-[400px] bg-black"></div>
+            <div class="grid grid-cols-3 gap-4 pt-[30px]">
+                <a href=""><img src="https://nitw.ac.in/media/files/moe.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/dii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/mii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/swach_bharath.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/fit_india.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/digilocker_nad.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

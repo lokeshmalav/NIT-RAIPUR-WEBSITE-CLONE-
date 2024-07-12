@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- use as " font-family: "Oswald", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- h font end -->
+    <!-- small font -->
+    <!-- use as"font-family: "Quicksand", sans-serif;" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- s font end -->
+    <link rel="preconnect" href="https://font.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script scr="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Montserrat:wght@400;700&amp;family=Rubik:wght@400;500&amp;family=Open+Sans:wght@400;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- extra link ends -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .clg-name{
+            display: flex;
+            flex-direction: column;
+            align-content:space-between ;
+            gap:5px;
+            opacity: 0.8;
+        }
+        .clg-title{
+            padding-top: 1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            width:100%vw;
+            height:9rem;
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        .head-search{
+            text-decoration: none;
+            position: relative;
+            left:60px;
+            
+        }
+        .nit-title{
+            
+            font-weight: bold;
+        }
+        .hindi-title{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        #main-title{
+            font-size: 25px;
+            font-family: "Merriweather", serif;
+        }
+        #sub-main-title{
+            
+            font-size: 17px;
+        }
+        .sticky{
+            position: sticky;
+            top:0px;
+            z-index: 990;
+            
+        }
+        .head-link{
+            height:5rem;
+            width:100%vw;
+            /* display:flex;
+           padding-left: 30px;
+           padding-right: 30px;
+            align-items: center;
+            justify-content:space-evenly;
+            gap:50px; */
+            background-image: url(https://nitw.ac.in/api/static/files/bg3_2024-2-29-18-33-32.jpg);
+        }
+        #home-icon{
+        transform: scale(1.75);
+        text-decoration-color:  solid rgb(241, 97, 39);
+        }
+        .title-link{
+            color: black;
+            text-decoration: none;
+            font-weight:500;
+            font-size: 18px;
+            
+            
+        }
+        .title-link:hover{
+            color: rgb(241, 97, 39);
+        }
+        .hline{
+            border-bottom: 7px solid rgb(241, 97, 39);
+        }
+        .dropdownmenu{
+            display: inline-block;
+            position: relative;
+        }
+        .INSTITUTE-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .INSTITUTE-HOVER{
+            display: block;
+        }
+        .INSTITUTE-HOVER li{
+            display: block;
+        }
+        .INSTITUTE-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+
+        }
+        .Administration-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Administration-HOVER{
+            display: block;
+        }
+        .Administration-HOVER li{
+            display: block;
+        }
+        .Administration-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Department-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Department-HOVER{
+            display: block;
+        }
+        .Department-HOVER li{
+            display: block;
+        }
+        .Department-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Examination-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Examination-HOVER{
+            display: block;
+        }
+        .Examination-HOVER li{
+            display: block;
+        }
+        .Examination-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Facilities-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Facilities-HOVER{
+            display: block;
+        }
+        .Facilities-HOVER li{
+            display: block;
+        }
+        .Facilities-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Centers-Cell-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Centers-Cell-HOVER{
+            display: block;
+        }
+        .Centers-Cell-HOVER li{
+            display: block;
+        }
+        .Centers-Cell-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        }
+        .Media-HOVER{
+            display: none;
+            position: absolute;
+            left:-30px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .dropdownmenu:hover .Media-HOVER{
+            display: block;
+        }
+        .Media-HOVER li{
+            display: block;
+        }
+        .Media-HOVER li:hover{
+            transform: translateX(7px);
+            color: rgb(241, 97, 39);
+        
+        }
+        .ab{
+            background-color:rgb(127, 255, 212,0.7);
+            width: 300px;
+            font-weight: 500;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+       <!-- clg main header start -->
+       <div class="clg-title">
+            <!-- nit logo -->
+            <div class="clg-img "><img src="./images/nitrr-logo.png" alt="img" width="100px"></div>
+            <!-- nit title -->
+            <div class="clg-name flex flex-col ">
+                <p class="hindi-title">राष्ट्रीय प्रौद्योगिकी संस्थान रायपुर</p>
+                <p class="nit-title" id="main-title">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</p>
+                <p class="nit-title" id="sub-main-title">An Institute of National Importance</p> 
+            </div>
+            <div class="head-search">
+                <a href=""><i class="gg-search"></i></i></a>     
+            </div>   
+        </div>
+
+        <!-- header links -->
+        <div class="sticky">
+            <div class="head-link flex justify-evenly pt-6">
+    
+                    <a href="/index.html" id="home-icon"  class="title-link relative top-[8px] "><i class="fa fa-home"></i></a>
+    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link inst ">Institute</a>
+                        <div class="ab INSTITUTE-HOVER   ">
+                            <ul>
+                                <li><a href="/gegesis.html">Genesis</a></li>
+                                <li><a href="/institute.html">About Institute</a></li>
+                                <li><a href="https://nitrr.ac.in/downloads/Vision%202030_24112021.pdf" target="_blank">Vision 2030</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Administration</a>
+                        <div class=" ab Administration-HOVER  ">
+                            <ul>
+                                <li><a href="/boarOfGov.html">Board of Governers</a> </li>
+                                <li><a href="/chairperson.html">Chairpersion</a></li>
+                                <li><a href="/director.html">Director</a></li>
+                                <li><a href="/deans.html">Deans</a></li>
+                                <li><a href="/registrar.html">Registrar</a></li>
+                                <li><a href="/senat.html">Senat</a></li>
+                                <li><a href="/workCommeeti.html">Building and Work Committee</a></li>
+                                <li><a href="/financeCommeetti.html">Finance Committee</a></li>
+                                <li><a href="">Administrative Staff</a></li>
+                                <li><a href="/community.html">Committees</a></li>
+                                <li><a href="">Faculty List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Department</a>
+                        <div class=" ab Department-HOVER  ">
+                            <ul>
+                                <li><a href="/IT.html">Information Technology</a></li>
+                                <li><a href="/appliedGeoligy.html">Applied Geology</a></li>
+                                <li><a href="/architecture.html">Department of Architecture & Planning</a></li>
+                                <li><a href="/bioMed.html">Biomedical Engineering</a></li>
+                                <li><a href="/bioTech.html">Bio Technology</a> </li>
+                                <li><a href="/chem.html">Chemical Engineering</a></li>
+                                <li><a href="/civil.html">Civil Engineering</a></li>
+                                <li><a href="/cse.html">Computer Science & Engineering</a></li>
+                                <li><a href="/chemistry.html">Department of Chemistry</a></li>
+                                <li><a href="/ca.html">Department of Computer Application</a></li>
+                                <li><a href="/math.html">Department of Mathematics</a></li>
+                                <li><a href="/physic.html">Department of Physics</a></li>
+                                <li><a href="/humanity.html">Department of Humanities & Social Sciences</a></li>
+                                <li><a href="/EE.html">Electrical Engineering </a></li>
+                                <li><a href="/ECE.html">Electronics and  Communication Engineering </a></li>
+                                <li><a href="/mech.html">Mechanical Engineering</a></li>
+                                <li><a href="/min.html">Mining Engineering</a></li>
+                                <li><a href="/meta.html">Metallurgical and Materials Engineering</a></li>
+                                <li><a href="/workshop.html">Workshop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="/rersearch.html" class=" dropdownmenu title-link "><span>Research & Consultancy</span></a>
+                    
+                    <div class="dropdownmenu   ">
+                        <a href="" class="title-link">Examination</a>
+                        <div class="ab Examination-HOVER  ">
+                            <ul>
+                                <li><a href="/timeTable.html">Time Table</a></li>
+                                <li><a href="/eduVeri.html">Education Verfication Procedure</a></li>
+                                <li><a href="/notice.html">Notice </a></li>
+                                <li><a href="/result.html">Results</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="dropdownmenu ">
+                        <a href="" class="title-link">Facilities</a>
+                        <div class="ab Facilities-HOVER  ">
+                            <ul>
+                            <li><a href="/centarlLibrery.html">Central Library</a></li>
+                            <li><a href="/hostel.html">Hostel</a></li>
+                            <li><a href="/medical.html">Medical Facilities</a></li>
+                            <li><a href="/guest.html">Guest House</a></li>
+                            <li><a href="/campusSecurity.html">Campus Security</a></li>
+                            <li><a href="/EstateOffice.html">Estate Office </a></li>
+                            <li><a href="https://nitrr.ac.in/downloads/notice/2022/Circular%20regarding%20charges%20for%20common%20facilities.pdf" target="_blank">Charges for Common Facilities</a></li>
+                            <li><a href="/sports.html">Sports</a></li>
+                            <li><a href="/allInOneStore.html">All in One Store</a></li>
+                            <li><a href="/vachan.html">Vachan Milk Parlour and Coffee Day</a></li>
+                            <li><a href="/canteen.html">Canteen and CCD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu ">
+                        <a href="https://ccc.nitrr.ac.in/" target="_blank" class="title-link">Centers / Cell</a>
+                        <div class="ab Centers-Cell-HOVER  ">
+                            <ul>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Central Computer Center</a></li>
+                                <li><a href="https://cdc.nitrr.ac.in/" target="_blank">Career Development Center</a></li>
+                                <li><a href="/educationCell.html">Continuing Education Center </a></li>
+                                <li><a href="https://tpo.nitrr.ac.in/" target="_blank">Training and Placement Cell</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdownmenu">
+                        <a href="" class="title-link">Media</a>
+                        <div class="ab Media-HOVER  ">
+                            <ul>
+                                <li><a href="/pmrc.html">PMRC</a></li>
+                                <li><a href="/galary.html">Image Gallery</a></li>
+                                <li><a href="https://www.youtube.com/channel/UC0esbqS3Lc9zXRddcf0uwPw" target="_blank">Video Gallery</a></li>
+                                <li><a href="https://nitrr.ac.in/mediapress.php" target="_blank">Press Clipping</a></li>
+                                <li><a href="/mirror.html">Mirror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.nitrrfie.in/" target="_blank" class=" title-link ">NITRRFIE</a>
+            </div>
+            <div class="hline"></div>
+        </div>
+
+        <!-- Page Content -->
+       <div class="h-[1100px] flex justify-center">
+            <div class="w-[1400px] border">
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+                    <div class="panel panel-primary" style="color:white;">
+                       <div class="panel-heading bg-green-400" style=" text-align:center;font-weight:bold;font-size:20px;">
+                       <i class="fa fa-bars bg-green-400" style="color:white; " aria-hidden="true"></i> &nbsp; 
+                Recruitment </div>
+                       <div style="color:black;">
+                     <div class="panel-body">
+                
+                
+                   <div class="container-fluid"><br>
+                   
+                 
+                
+                <ul style=" list-style-image: url('img/gear.png');list-style-position: inside;">
+                
+                 <ul>
+                
+                
+                
+                
+                
+                
+                <li><a href="downloads/recruitment/2024/Advertisement_for_JRF10_04_2024.pdf">Re-advertisement for the post of JRF in the Department of Electronics and Communication Engineering, NIT Raipur under SERB, Govt. of India sponsored project.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                            <ul>
+                   <li><a href="downloads/recruitment/2024/Annexure_I_Application_form10_04-2024.pdf">Application form</a></li> 
+                   
+                
+                     
+                  </ul>
+                
+                <li><a href="downloads/recruitment/2024/SPC JRF adv n Form on 16-4.2024.docx">Re-advertisement for the Post of One Junior Research Fellow (JRF) in State Planning Commission Project with Google Form</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span>
+                <a href="https://forms.gle/TDrCcgbhbkj5De8C8">[Google Form]</a>
+                </li> 
+                
+                
+                
+                <li><a href="downloads/recruitment/2024/CGCOST Project Advertisement along with Application form.pdf">"Advertisement for the Post of One Project Fellow (PF) in CGCOST Project" with Google Form
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                
+                <li><a href="downloads/recruitment/2024/Advertisement_JRF_4-4-2024.pdf">Advertisement for the Post of ONE Junior Research Fellow (JRF) in DST Funded Project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                <li><a href="downloads/recruitment/2024/Advertisement_RA_4-4-2024.pdf">Advertisement for the Post of ONE Research Associate (RA) in DST Funded Project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                
+                <li><a href="downloads/recruitment/2024/Internship Advertisement and APPLICATION FORMAT.docx">Applications are invited from UG/PG students for 2 months internship
+                in Department of Biomedical Engineering (SERB-CRG project)</a></li>
+                
+                 <!--<li><a href="downloads/recruitment/2024/Full_advertisement_NITRR_03042024.pdf">Re-advertisement for the post of Junior Research Fellow in
+                the Department of Information Technology NIT Raipur under IBITF, DST(ICPS) sponsored project</a></li>-->
+                  <!--<li><a href="downloads/recruitment/2024/Application Form for JRF_IT02042024.pdf">Advertisement for the recruitment of JRF for project Design and Implementation of financial tracking and management e-platform for chartered professional accountant, IBITF, IIT Bhilai" in Department of Information Technology 
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                 <li><a href="downloads/recruitment/2024/Advertisement and APPLICATION FORMATBM02042024.pdf">Applications are invited for the post of a Junior Research Fellow in the Department of Biomedical Engineering (DST-SATYAM project)</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                 <!--<li><a href="downloads/recruitment/2024/SPC JRF adv n Form_02042024.pdf">Advertisement for Walk-in-Interview for JRF</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span>
+                <a href="https://forms.gle/TDrCcgbhbkj5De8C8">[Google Form]</a>-->
+                 
+                
+                 <!--<li><a href="downloads/recruitment/2024/Final_Advertisement02042024_IITDSt.pdf">Advertisement for the post of Junior Research Fellow in the Department of Information Technology NIT Raipur under TiHAN, DST(ICPS) sponsored project</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                 <li><a href="downloads/recruitment/2024/Application form for Programmer032024.pdf">Advertisement for the recruitment of Programmer for project Design and Implementation of financial tracking and management e-platform for chartered professional accountant, IBITF, IIT Bhilai" in Department of Information Technology 
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/Advertisment for PF Civil Engineering.pdf">Advertisement for the temporary post of ‘01 Project Fellow’ in the Department of Civil Engineering, NIT Raipur</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <!--<li><a href="downloads/recruitment/2024/Advertisement_JRF.pdf">Advertisement for the Post of ONE Junior Research Fellow (JRF) in DST Funded Project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                <li><a href="downloads/recruitment/2024/Advertisement_RA.pdf">Advertisement for the Post of ONE Research Associate (RA) in DST Funded Project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                     
+                <!--<li><a href="downloads/recruitment/2024/Full_advertisement_IITBhilai.pdf">Advertisement for the post of <b>Junior Research Fellow </b>in the Department of Information Technology NIT Raipur under <b>IBITF, DST(ICPS) </b>sponsored project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                     
+                
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/JRF_Recruitment_advertisement & application form_EED_NITRR.pdf">Walk-In-Interview For The Post Of Junior Research Fellow (JRF)/PROJECT Staff  In The Department Of Electrical Engineering, Nit Raipur.    
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                     
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/JRF Advertisement12-03-2024.pdf">Advertisement for the Post of Junior Research Fellow Under NRB DRDO Sponsored Project Titled “Design and Development of Multilevel Inverter for Permanent Magnet Synchronous Motor Drive to Minimize the Conducted Electro Magnetic Interference in Marine Applications” in the Department of Electrical Engineering, NIT Raipur.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                     
+                <br>
+                
+                
+                 <!--<li><a href="downloads/recruitment/2024/Advertisement _ UNICEF Sponsored Project _ Dept. of Civil Engg. NIT Raipur.pdf">Advertisement for UNICEF Sponsored Project Position _ Dept. of Civil Engineering</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                     
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/1. JRF Advertisement_06-03-2024.pdf">Advertisement for the post of JRF in the Department of Computer Application, NIT Raipur under IBITF, Govt. of India sponsored project.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                            <ul>
+                   <li> Application Form <a href="downloads/recruitment/2024/3. Application Form_Word.doc">(doc) </a><a href="downloads/recruitment/2024/2. Application Form_PDF.pdf">(pdf) </a></li> 
+                   
+                
+                     
+                  </ul>-->
+                
+                
+                
+                
+                <!--
+                
+                <li><a href="downloads/recruitment/2024/serb_adv03062024.pdf">Advertisement for the post of JRF in the Department of
+                Electronics and Communication Engineering, NIT Raipur under SERB, Govt. of India sponsored project.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                            <ul>
+                    <li><a href="downloads/recruitment/2024/Annexure_I_Application_form.pdf">Application Form </a></li> 
+                     
+                  </ul>
+                
+                
+                
+                
+                
+                <li><a href="downloads/recruitment/2024/Advertisement_JRF_11.03.2024.pdf">Advertisement for the Post of JRF in Department of Applied Geology, NIT Raipur</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <li><b>Recruitment Notice for the post of Technical Assistant (Architecture &amp; Bio-Medical Engg) under Direct Recruitment [ No./NITRR/R-1/Advt./2024/947 dated 04/03/2024 ]</b><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                      
+                
+                            <ul>
+                    <li><a href="downloads/recruitment/2024/NIT Raipur - Detailed Advertisement_04-3-24.pdf">Detailed Advertisement</a></li> 
+                     <li><a href="https://recruitment-nt.nitrr.ac.in/">Online Application Portal</a></li>   
+                  </ul><br> 
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/JRF_Advertisment_forSERB_CRG_project_Dept_of_IT_NITRaipur_22Feb2024.pdf">Advertisement for the Post of <b>Junior Research
+                Fellow (JRF) </b>in the Department of Information Technology, NIT Raipur under <b>SERB(CRG)</b> sponsored project.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <!--<li><a href="downloads/recruitment/2024/Advertisement SRF (revised).pdf">Advertisement for the post of Senior Research Fellow
+                (SRF) under DST-SERB sponsored project titled “In situ application of a Microbial Peroxide producing cell for oxidative depolymerisation of lignin and its subsequent valorisation” in the Department of Biotechnology, NIT Raipur.
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/Advertisement_Interns Student intern.docx">Walk in interview for a student intern position in a DST-SERB (File
+                No. CRG/2021/005256) funded project in the Department of
+                Metallurgical and Materials Engineering, NIT Raipur</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/Advertisement_JRF_15.03.2023.pdf">Advertisement for the Post of JRF in Department of Applied Geology, NIT Raipur</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                <!--<li><a href="downloads/recruitment/2024/JRF Recruitment_ECE_NITRR_080224.pdf">Advertisement for the post of Junior Research Fellow (JRF)
+                under SERB-CRG sponsored project titled “Algorithms for
+                Freshness of CSIT in 5G and Beyond Wireless Networks”
+                in the Department of Electronics and Communication
+                Engineering, NIT Raipur.</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/Project Associate Recruitement Advt_Civil Engg.pdf">Walk In Interview For The Post of Project Associate-I in the Department of Civil Engineering, NIT Raipur</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                
+                <li>Recruitment Notice for Part-Time Faculty (Mining Engineering Department): Last date of submission of applications (via email): 10th February, 2024.<img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                      
+                
+                            <ul>
+                    <li><a href="downloads/recruitment/2024/1. Recruitment Notice, Essential Qualification and Important Note.pdf"> Recruitment Notice, Essential Qualification and Important Note</a></li> 
+                     <li><a href="downloads/recruitment/2024/2. Application Form - for Part Time Faculty.doc">Application Form - for Part Time Faculty</a></li>   
+                  </ul><br> 
+                
+                
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2024/JRF_Recruitment01232024.pdf">Advertisement for the post of JRF &amp; Filed worker in the
+                Department of Electronics and Communication Engineering,NIT Raipur under IBITF, IIT Bhilai sponsored project.</a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> 
+                
+                      
+                
+                            <ul>
+                    <li><a href="downloads/recruitment/2024/Application_Format.docx">Application Form</a></li> 
+                      
+                  </ul><br> -->
+                
+                
+                
+                
+                <!--<li><a href="downloads/recruitment/2023/JRF Recruitment_EED_NITRR_2_19-01-24.pdf">Advertisement for the Post of Junior Research Fellow Under SERB-DST-Sponsored Project Titled “Development of Intelligent Controllers for Back-EMF-Based Position Sensorless Brushless DC Motor Drives Employed in Solar Photovoltaic Water Pumping Systems” in the Department of Electrical Engineering, NIT Raipur
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <!--<li><a href="downloads/recruitment/2023/Updated_Application_JRF17.pdf">Advertisement for the post of Junior Research Fellow in the
+                Department of Information Technology NIT Raipur under SERB sponsored project
+                </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <!--<li><a href="downloads/recruitment/2023/Project Staff Recruitement Advt.pdf">Advertisement of walk-in-interview for recruitment of Project Staff in ICMR Sponsored Project entitled “Application of selective plant metabolites to modulate antibiotic efflux pump and inhibition of biofilm developed by antibiotic-resistant Escherichia coli liable for urine infection” by Department of Biotechnology, National Institute of Technology, Raipur.
+                 </a><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"> </span></li> -->
+                
+                <li><b>Recruitment Notice for Temporary Faculty, Teaching Assistant and Part-Time Faculty: Last date of submission of applications (via email): January 16, 2024.
+                </b><img border="0" src="images/new6.gif" width="18" height="7"><span style="color:#000; padding-left:15px;"></span></li> 
+                   <ul>
+                         <li><a href="downloads/recruitment/2023/1. Recruitment Notice, Important Note and Essential Qualification.pdf">Recruitment Notice, Important Note and Essential Qualification</a></li> 
+                         <li><a href="downloads/recruitment/2023/2. Application Form - for Contract Faculty.doc">Application Form - for Contract Faculty    </a></li> 
+                    
+                  </ul>
+                
+                
+               
+                
+                
+                
+                
+                <li><a> Recruitment Notice for the Non-Teaching Posts </a></li>
+                
+                <ul>
+                
+                <li><a href="downloads/recruitment/recruitment2019/1. Recruitment Notice.PDF">1. Recruitment Notice</a></li>
+                <li><a href="downloads/recruitment/recruitment2019/2. General Conditions.PDF">2. General Conditions</a></li>
+                <li><a href="downloads/recruitment/recruitment2019/3. Recruitment Rules.PDF">3. Recruitment Rules</a></li>
+                <li><a href="downloads/recruitment/recruitment2019/4. Application Form.docx">4. Application Form</a></li>
+                <li><a style="color:red" href="downloads/recruitment/Notification.pdf">NOTIFICATION
+                
+                [No. NITRR/R-1/2022/312 Dated: 05/08/2022]</a></li>
+                
+                
+                
+                </ul>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                
+                
+                <ul></ul></div></div></div></div></div>
+            </div>
+       </div>
+        
+
+    <!-- footer -->
+    <div class="hline relative top-[-96px]"></div>
+
+    <div class="quick-link-footer h-[520px] relative top-[-96px] bg-[#212529] grid grid-cols-2 overflow-x-hidden">
+        <div class="footer-left ">
+            <h2 class=" justify-center font-mullish text-white text-2xl font-bold pt-[30px] pl-[300px] pb-[30px]">Quick Link</h2>
+            <div class="h-1 w-[700px] relative left-[30px]  bg-white"></div>
+            <div class="flex justify-center relative left-[30px] pt-[40px]">
+                <div class="flex flex-col gap-y-3 text-white">
+                    <a href="">NIT Raipur at a Glance</a>
+                    <a href="">Vision 2030</a>
+                    <a href="">MIS</a>
+                    <a href="">MOUs</a>
+                    <a href="">MOOCs</a>
+                    <a href="">NITRR newsletter</a>
+                    <a href="">Year Wise Topper List</a>
+                    <a href="">NIT Act , Statues and Office Memorandum</a>
+                    <a href="">E-Booklet</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Web OPAC</a>
+                    <a href="">ICC</a>
+                    <a href="">RTI</a>
+                    <a href="">TEQIP III</a>
+                    <a href="">Shilpi</a>
+                    <a href="">Research Newsletter NIT Raipur</a>
+                    <a href="">SWAYAM Free Online Education</a>      
+                    <a href="">Pledge Certificate</a>
+                    <a href="">Institute Alumnus Awards</a>
+                </div>
+                <div class="flex flex-col gap-y-3 text-white ">
+                    <a href="">Annual Report</a>
+                    <a href="">Unnat Bharat Abhiyan At NITRR</a>
+                    <a href="">Anti ragging System</a>
+                    <a href="">Terms & Condition</a>
+                    <a href="">Industry Institute Collaboration Cell(IICC)</a>        
+                    <a href="">National Academic Depository(NAD)</a>
+                    <a href="">NIT Raipur Liberary Discovery</a>
+                    <a href="">Institute Innovation and Start up Policy</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <iframe class="relative top-[90px] left-[100px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.549083284962!2d81.60245417521736!3d21.249722180455397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1712469817699!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+    </div> 
+
+    <!-- last-footer -->
+    <div class="hline relative top-[-96px]"></div>
+    <div class="last-footer relative pt-[40px] pb-[40px]  pr-[40px] top-[-96px] bg-[url(https://nitw.ac.in/api/static/files/green_bg_2024-2-29-18-13-29.jpg)] grid grid-cols-2">
+        <div class="last-footer-left pl-[100px]">
+            <h1 class="font-mullish text-black text-4xl font-bold pb-[30px]">Contact Us</h1>
+            <div class="bg-black h-1 w-[300px] "></div>
+            <div class="pt-[20px]">
+                <img src="./images/nitrr-logo.png" alt="" width="100px">
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">+91-870-xxxxxxx,+91-870-xxxxxxx</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">NATIONAL INSTITUTE OF TECHNOLOGY RAIPUR</span></div>
+                <div class="pt-[15px]"><i></i><span class="font-quicksand text-black text-xl font-bold">registrar@nitrr.ac.in</span></div>
+                <div class="flex pt-[20px] gap-[20px]">
+                    <a href="">
+                        <img src="./images/facebook2.png" alt="" width="40px">
+                    </a>
+                    <a href=""><img src="./images/twitter2.png" alt="" width="40px"></a>
+                    <a href=""><img src="./images/google.png" alt="" width="57px" class="relative top-[4px]"></a>
+                    <a href=""><img src="./images/insta2.png" alt="" width="40px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer-right pr-[80px]">
+            <h1 class="font-mullish text-black text-4xl pb-[20px]  font-bold">National portals</h1>
+            <div class="h-1 w-[400px] bg-black"></div>
+            <div class="grid grid-cols-3 gap-4 pt-[30px]">
+                <a href=""><img src="https://nitw.ac.in/media/files/moe.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/dii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/mii.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/swach_bharath.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/fit_india.png" alt=""></a>
+                <a href=""><img src="https://nitw.ac.in/media/files/digilocker_nad.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
